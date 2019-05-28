@@ -8,27 +8,67 @@ $f-n : 'NanumBrunGothic', serif;
 /********************** 
 * layout
 ***********************/
-div.wrapper {
-    position: relative;
+div.wrapper {    
     margin: 0 auto;
     
-    section {
+    div#section0 {
 
+    }
+
+    div#section1 {
+        
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/bg_1.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    div#section2 {
+        
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/bg_2.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    div#section3 {
+        
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/bg_3.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    div#section4 {
+        
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/bg_4.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
     }
 }
 
-/********************** 
-* header
-***********************/
-header {
 
-}
+.popup {
+    position: absolute;
+    left: 50%; top: 50%;
+    z-index: 100;
 
-/********************** 
-* footer
-***********************/
-footer {
+    &.youtube-wrap {
+        width: 1000px; height: 752px;
+        margin: -375px 0 0 -500px;
+        border: 10px solid orange;
+        transform: scale(0.2);
+        transition: transform 0.5s;
+    }
 
+    &.on {
+        transform: scale(1);
+    }
 }
 
 /********************** 

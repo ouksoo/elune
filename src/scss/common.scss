@@ -108,15 +108,178 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
          url('../img/font/notokr-regular.svg#notokr-regular') format('svg');
 }
 
-/*
-@font-face {
-    font-family: 'NanumBrunGothic';
-    src: url('../img/font/NanumBarunGothic.eot');
-    src: url('../img/font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
-         url('../img/font/NanumBarunGothic.woff2') format('woff2'),
-         url('../img/font/NanumBarunGothic.woff') format('woff'),
-         url('../img/font/NanumBarunGothic.ttf') format('truetype');
-}
-*/
-
 @import 'style.scss';
+
+
+#fall-video {overflow: hidden;position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+#fall-video video {position: absolute;left: 0;top: 0;}
+#fall-video .fall-video-cover {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-image: url('');}
+
+/* fall nav */
+#fall-nav {
+	z-index: 1000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/* fake box */
+.fake-box-contents {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 100%;
+	margin: 0 auto;
+}
+.fake-box-inner {
+	position: relative;
+	left: -25px;
+	top: 0;
+	padding-left: 25px;
+	margin: 0 auto;
+}
+
+/* fall scroll */
+#fall-scroll {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-width: 1100px;
+	height: 100%;
+}
+#fall-scroll .fall-section {
+	z-index: 10;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.fall-section-scroll {
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	height: 100%;
+}
+.fall-section-scroll.hide-scroll {
+	overflow: hidden;
+}
+.fall-section-scroll.fake-hide-scroll {
+	overflow: hidden;
+}
+.fall-section-scroll .fall-container {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 100%;
+	margin: 0 auto;
+}
+.fall-section-scroll .fall-container .fall-contents {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 100%;
+	margin: 0 auto;
+}
+.fall-section-scroll .fall-container .fall-contents .fall-inner {
+	position: relative;
+	left: -25px;
+	top: 0;
+	min-height: 100%;
+	padding-left: 25px;
+	margin: 0 auto;
+}
+
+/* slide-horizontal */
+#fall-scroll.slide-horizontal .fall-section.current {
+	z-index: 20;
+	opacity: 1;
+	left: 0;
+}
+#fall-scroll.slide-horizontal .fall-section.prepare-prev {
+	opacity: 1;
+	left: -100%;
+}
+#fall-scroll.slide-horizontal .fall-section.prepare-next {
+	opacity: 1;
+	left: 100%;
+}
+#fall-scroll.slide-horizontal .fall-section.hide-prev {
+	left: 100%;
+}
+#fall-scroll.slide-horizontal .fall-section.hide-next {
+	left: -100%;
+}
+#fall-scroll.slide-horizontal .fall-section.show-prev {
+	left: 0;
+}
+#fall-scroll.slide-horizontal .fall-section.show-next {
+	left: 0;
+}
+
+/* slide-vertical */
+#fall-scroll.slide-vertical .fall-section.current {
+	z-index: 20;
+	opacity: 1;
+	top: 0;
+}
+#fall-scroll.slide-vertical .fall-section.prepare-prev {
+	opacity: 1;
+	top: -100%;
+}
+#fall-scroll.slide-vertical .fall-section.prepare-next {
+	opacity: 1;
+	top: 100%;
+}
+#fall-scroll.slide-vertical .fall-section.hide-prev {
+	top: 100%;
+}
+#fall-scroll.slide-vertical .fall-section.hide-next {
+	top: -100%;
+}
+#fall-scroll.slide-vertical .fall-section.show-prev {
+	top: 0;
+}
+#fall-scroll.slide-vertical .fall-section.show-next {
+	top: 0;
+}
+
+/* fade-scale */
+#fall-scroll.fade-scale .fall-section.current {
+	z-index: 20;
+	opacity: 1;
+	left: 0;
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.prepare-prev {
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.prepare-next {
+	transform: scale(3, 3);
+	-webkit-transform: scale(3, 3);
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.hide-prev {
+	opacity: 0;
+	transform: scale(3, 3);
+	-webkit-transform: scale(3, 3);
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.hide-next {
+	opacity: 0;
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.show-prev {
+	opacity: 1;
+	transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+}
+.fall-scale #fall-scroll.fade-scale .fall-section.show-next {
+	opacity: 1;
+	transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+}
