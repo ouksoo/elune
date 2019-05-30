@@ -1,6 +1,7 @@
 let ELUNE = {
     init: function() {
-        
+        this.setLnbPaging();
+        this.setHeaderLink();
     },
     setPlayer: function() {
         var winH, winW, h, w;
@@ -20,10 +21,48 @@ let ELUNE = {
             $(this).center();
         });
     },
+    setLnbPaging: function() {
+        var pagingBtn = $('#paging ul li a');
+		pagingBtn.on('click', function(e){
+            var $self, idx;
+			e.preventDefault();
+			$self = $(this);
+			if(fallscroll.config.isAnimating) return false;
+			if(fallscroll.config.isLockWheel) return false;
+			if($self.hasClass('active')) return false;
+			else {
+                idx = pagingBtn.index($self);
+				pagingBtn.removeClass('active');
+				$self.addClass('active');
+				fallscroll.goto(idx);
+            }
+            $('header a').removeClass('active');
+		});  
+    },
+    setHeaderLink: function() {
+        var pagingBtn = $('header a');
+		pagingBtn.on('click', function(e){
+            var $self, idx;
+			$self = $(this);
+			if(fallscroll.config.isAnimating) return false;
+			if(fallscroll.config.isLockWheel) return false;
+			if($self.hasClass('active')) return false;
+			else {
+                idx = pagingBtn.index($self);
+                if(idx != 6) { // 공식카페 링크
+                    e.preventDefault();
+                    pagingBtn.removeClass('active');
+                    $self.addClass('active');
+                    fallscroll.goto(idx);
+                }
+			}
+		});  
+    },
 }
 
 // after loaded execute
 $(document).ready(function() {
+    ELUNE.init();
     ELUNE.setPlayer();
 });
 

@@ -204,7 +204,7 @@ var fallscroll;
     html = '<style>.vertical_scroll #fall-nav .inner {width: ' + navWidth + 'px;}</style>';		
     $('head').append(html);		
     paging = $('#paging');		
-    pagingBtn = paging.find('ol li a');		
+    pagingBtn = paging.find('ul li a');		
     pagingTab = $('#paging .inner .tab button');		
     function checkPopDisplay(){			
         var result;			
@@ -241,16 +241,16 @@ var fallscroll;
         onSectionChangeStart : function(fs){ /* 섹션 전환이 시작될 때 */				
             init(fs.nextIndex);
             if(fs.nextIndex === 1){
-                console.log(1);
+                // console.log(1);
             }
             if(fs.nextIndex === 2){
-                console.log(2);
+                // console.log(2);
             }
             if(fs.nextIndex === 3){
-                console.log(3);
+                // console.log(3);
             }
             if(fs.nextIndex === 4){					
-                console.log(4);
+                // console.log(4);
             }
         },
         onSectionChangeEnd : function(fs){ /* 섹션 전환이 완료될 때 */

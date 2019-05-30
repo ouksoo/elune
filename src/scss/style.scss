@@ -1,18 +1,133 @@
 /********************** 
 * val
 ***********************/
-$f-m : 'Karla', sans-serif;
-$f-p : 'Playfair Display', serif;
-$f-n : 'NanumBrunGothic', serif;
+
 
 /********************** 
 * layout
 ***********************/
 div.wrapper {    
     margin: 0 auto;
+
+    div#paging {
+        position: fixed;
+        top: 50%; left: 50px;
+        margin: -147px 0 0 0;
+        z-index: 25;
+
+        ul.lnb-navi {
+
+            li {
+                padding: 15px 0;
+
+                a {
+                    display: inline-block;
+                    width: 18px; height: 18px;
+                    background: url('../img/pc/icon_navi_off.png') 0 0 no-repeat;
+                    text-indent: -9999px;
+
+                    &.active {
+                        background: url('../img/pc/icon_navi_on.png') 0 0 no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 77px;
+        z-index: 25;
+        background: #000;
+
+        a.h1 {
+            position: absolute;
+            width: 180px; height: 77px;
+            background: url('../img/pc/header_logo.jpg') 50% 50% no-repeat;
+            text-indent: -9999px;
+        }
+        div.navigation {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                font-size: 18px;
+                color: #fff;
+                margin: 0 150px;
+                line-height: 78px;
+
+                &.active {
+                    color: #d9e340;
+                }
+            }
+            div.games {
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                color: #fff;
+                margin: 0 150px;
+                line-height: 60px;
+
+                div.submenus {
+                    position: absolute;
+                    background: #000;
+                    width: 365px;
+                    left: 50%; top: 57px;
+                    margin-left: -182px;
+        
+                    a {
+                        display: inline-block;
+                        color: #828282;
+                        font-size: 18px;
+                        line-height: 30px;
+                        margin: 0 25px;
+
+                        &.active {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        a.go-cafe {
+            position: absolute;
+            font-size: 16px;
+            right: 50px; top: 26px;
+            color: #fff;
+            background: url('../img/pc/icon_cafe.png') 0% 30% no-repeat;
+            padding-left: 30px;
+            line-height: 30px; 
+        }
+    }
+    footer {
+        position: fixed;
+        bottom: 0; left: 0;
+        width: 100%; height: 77px;
+        z-index: 25;
+        background: #fff;
+        padding: 23px 0 0 47px;
+
+        p {
+           width: 364px; height: 24px;
+           background: url('../img/pc/copyright.jpg') 50% 50% no-repeat;
+           text-indent: -9999px;
+        }
+    }
     
     div#section0 {
 
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/pc/bg_1.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+        div.fall-inner {
+            
+            .inner {
+
+            }
+        }
     }
 
     div#section1 {
@@ -47,6 +162,15 @@ div.wrapper {
         div.scene_bg {
             width: 100%; height: 100%;
             background: url('../img/bg_4.jpg') 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    div#section5 {
+        
+        div.scene_bg {
+            width: 100%; height: 100%;
+            background: url('../img/bg_2.jpg') 50% 50% no-repeat;
             background-size: cover;
         }
     }

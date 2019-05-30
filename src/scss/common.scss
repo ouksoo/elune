@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* ***************  global *************** */
 // Montserrat 400, 600
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
 
 * {box-sizing: border-box}
-html, body {margin:0; padding:0; font-family: 'NotoSansCJKkr', serif; color: #333;}
+html, body {margin:0; padding:0; font-family: 'Nanum Gothic', sans-serif; color: #333;}
 
 .clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden; } .clearfix { display:inline-block; }/*  ie-mac \*/ *html .clearfix {height: 1%;} .clearfix {display: block;}/* ie-mac */
 
