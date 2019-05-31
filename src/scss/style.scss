@@ -67,10 +67,12 @@ div.wrapper {
                 font-size: 18px;
                 color: #fff;
                 margin: 0 150px;
-                line-height: 60px;
+                line-height: 78px;
 
                 div.submenus {
+                    display: none;
                     position: absolute;
+                    z-index: 24;
                     background: #000;
                     width: 365px;
                     left: 50%; top: 57px;
@@ -86,6 +88,12 @@ div.wrapper {
                         &.active {
                             color: #fff;
                         }
+                    }
+                    span {
+                        display: inline-block;
+                        width: 5px; height: 5px;
+                        vertical-align: middle;
+                        background: url('../img/pc/icon_submenu_dot.png') 0 0 no-repeat;
                     }
                 }
             }
@@ -181,19 +189,30 @@ div.wrapper {
     position: absolute;
     left: 50%; top: 50%;
     z-index: 100;
+    border: 1px solid orange;
+
+    a.movie-close {
+        position: absolute;
+        top: -66px; right: -66px;
+        width: 51px; height: 51px;
+        background: url('../img/pc/btn_close.png') 0 0 no-repeat;
+        text-indent: -9999px;
+    }
 
     &.youtube-wrap {
-        width: 1000px; height: 752px;
-        margin: -375px 0 0 -500px;
-        border: 10px solid orange;
-        transform: scale(0.2);
-        transition: transform 0.5s;
+        width: 960px; height: 539px;
+        margin: -268px 0 0 -480px;
+        transform: scale(0.6);
+        transition: transform 0.5s, opacity 0.3s;
+        opacity: 0;
     }
 
     &.on {
         transform: scale(1);
+        opacity: 1;
     }
 }
+
 
 /********************** 
 * globals

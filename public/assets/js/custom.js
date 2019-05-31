@@ -4,6 +4,7 @@ var ELUNE = {
     init: function init() {
         this.setLnbPaging();
         this.setHeaderLink();
+        this.utils();
     },
     setPlayer: function setPlayer() {
         var winH, winW, h, w;
@@ -57,6 +58,43 @@ var ELUNE = {
                     fallscroll.goto(idx);
                 }
             }
+        });
+    },
+    utils: function utils() {
+        $('header div.games, header div.submenus').on('mouseover', function () {
+            $('header div.submenus').stop().fadeIn(100);
+        }), $('header div.games, header div.submenus').on('mouseout', function () {
+            $('header div.submenus').stop().fadeOut(100);
+        }),
+        // moive global
+        $('a#movieplay').on('click', function () {
+            var thisMovie = $(this).data('movie');
+            var movieAddress = void 0;
+            if (thisMovie == 'intro') {
+                movieAddress = '<iframe width="960" height="539" src="https://www.youtube.com/embed/w8D7lLpO4nU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            }
+
+            var mov = setTimeout(function () {
+                $('div.inner-movie').html(movieAddress);
+                $('div.youtube-wrap').fadeIn(10, function () {
+                    $('div.youtube-wrap').addClass('on');
+                });
+
+                $('div.youtube-wrap a.movie-close').on('click', function () {
+                    $('div.youtube-wrap').removeClass('on');
+                });
+            }, 500);
+        });
+
+        // Can also be used with $(document).ready()
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+
+        $('.wowslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
         });
     }
 
