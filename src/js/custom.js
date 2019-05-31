@@ -30,14 +30,16 @@ let ELUNE = {
 			$self = $(this);
 			if(fallscroll.config.isAnimating) return false;
 			if(fallscroll.config.isLockWheel) return false;
-			if($self.hasClass('active')) return false;
+			if($self.hasClass('active')) {
+                return false;
+            }
 			else {
                 idx = pagingBtn.index($self);
 				pagingBtn.removeClass('active');
 				$self.addClass('active');
 				fallscroll.goto(idx);
             }
-            $('header a').removeClass('active');
+            // $('header a').removeClass('active');
 		});  
     },
     setHeaderLink: function() {
@@ -47,7 +49,9 @@ let ELUNE = {
 			$self = $(this);
 			if(fallscroll.config.isAnimating) return false;
 			if(fallscroll.config.isLockWheel) return false;
-			if($self.hasClass('active')) return false;
+			if($self.hasClass('active')) {
+                return false;
+            }
 			else {
                 idx = pagingBtn.index($self);
                 if(idx != 6) { // 공식카페 링크

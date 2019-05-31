@@ -69,6 +69,9 @@ div.wrapper {
                 margin: 0 150px;
                 line-height: 78px;
 
+                &.active {
+                    color: #d9e340;
+                }
                 div.submenus {
                     display: none;
                     position: absolute;

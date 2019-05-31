@@ -239,22 +239,36 @@ var fallscroll;
             /* console.log(fs); */			
         },			
         onSectionChangeStart : function(fs){ /* 섹션 전환이 시작될 때 */				
-            init(fs.nextIndex);
-            if(fs.nextIndex === 1){
-                // console.log(1);
-            }
-            if(fs.nextIndex === 2){
-                // console.log(2);
-            }
-            if(fs.nextIndex === 3){
-                // console.log(3);
-            }
-            if(fs.nextIndex === 4){					
-                // console.log(4);
-            }
-        },
-        onSectionChangeEnd : function(fs){ /* 섹션 전환이 완료될 때 */
+			init(fs.nextIndex);
 
+			
+        },
+		onSectionChangeEnd : function(fs){ /* 섹션 전환이 완료될 때 */		
+			
+			$('header a').removeClass('active');
+			if(fs.currentIndex === 0){
+                
+			}
+			if(fs.currentIndex === 1){
+				$('header a.hm-1').addClass('active');
+				$('header div.games').removeClass('active');
+			}
+			if(fs.currentIndex === 2){
+				$('header div.games').addClass('active');
+                $('header a.hm-2').addClass('active');
+			}
+			if(fs.currentIndex === 3){
+				$('header div.games').addClass('active');
+                $('header a.hm-3').addClass('active');
+			}
+			if(fs.currentIndex === 4){
+				$('header div.games').addClass('active');
+                $('header a.hm-4').addClass('active');
+			}
+			if(fs.currentIndex === 5){
+				$('header a.hm-5').addClass('active');
+				$('header div.games').removeClass('active');
+            }
         },			
         onScrollBarChangeStart :function(fs){ /* 스크롤바가 섹션에 맞게 상태 변화 시작될 때 */				
             body.removeClass('vertical_scroll');			
