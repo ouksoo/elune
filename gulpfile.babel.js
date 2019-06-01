@@ -46,7 +46,7 @@ gulp.task('image', () => gulp.src(SRC.IMAGE)
 // scss 변환
 gulp.task('sass', () => {
         return gulp
-        .src(['src/scss/common.scss'])
+        .src(SRC.SCSS)
         .pipe(wait(500))
         .pipe(sourcemaps.init())
         .pipe(sass({

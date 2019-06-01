@@ -286,284 +286,443 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 
 
 // gallery
-/*
- * jQuery FlexSlider v2.7.2
- * https://www.woocommerce.com/flexslider/
- *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 and later license.
- * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * Contributing author: Tyler Smith (@mbmufffin)
- *
- */
-/* ====================================================================================================================
- * FONT-FACE
- * ====================================================================================================================*/
- @font-face {
-	font-family: 'flexslider-icon';
-	src: url('../fonts/flexslider-icon.eot');
-	src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-  }
-  /* ====================================================================================================================
-   * RESETS
-   * ====================================================================================================================*/
-  .flex-container a:hover,
-  .flex-slider a:hover {
-	outline: none;
-  }
-  .slides,
-  .slides > li,
-  .flex-control-nav,
-  .flex-direction-nav {
+div.gallery-wrap {
+	position: absolute;
+	width: 803px;
+	top: 224px; left: 77px;
+
+	ul {
+		list-style: none outside none;
+		padding-left: 0;
+		margin-bottom:0;
+
+		li {
+			display: block;
+			float: left;
+			margin-right: 6px;
+			cursor:pointer;
+
+			img {
+				display: block;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&#multimediaContent-1 {
+		z-index: 2;
+	}
+	&#multimediaContent-2 {
+		z-index: 1;
+	}
+
+	.lSSlideOuter .lSPager.lSGallery {
+		margin-top: 25px !important;
+	}
+}
+
+
+/*! lightslider - v1.1.6 - 2016-10-25
+* https://github.com/sachinchoolur/lightslider
+* Copyright (c) 2016 Sachin N; Licensed MIT */
+/*! lightslider - v1.1.3 - 2015-04-14
+* https://github.com/sachinchoolur/lightslider
+* Copyright (c) 2015 Sachin N; Licensed MIT */
+/** /!!! core css Should not edit !!!/**/ 
+
+.lSSlideOuter {
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+.lightSlider:before, .lightSlider:after {
+	content: " ";
+	display: table;
+}
+.lightSlider {
+	overflow: hidden;
 	margin: 0;
-	padding: 0;
-	list-style: none;
-  }
-  .flex-pauseplay span {
-	text-transform: capitalize;
-  }
-  /* ====================================================================================================================
-   * BASE STYLES
-   * ====================================================================================================================*/
-  .flexslider {
-	margin: 0;
-	padding: 0;
-  }
-  .flexslider .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
-  }
-  .flexslider .slides img {
-	width: 100%;
-	display: block;
-  }
-  .flexslider .slides:after {
-	content: "\0020";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-  }
-  html[xmlns] .flexslider .slides {
-	display: block;
-  }
-  * html .flexslider .slides {
-	height: 1%;
-  }
-  .no-js .flexslider .slides > li:first-child {
-	display: block;
-  }
-  /* ====================================================================================================================
-   * DEFAULT THEME
-   * ====================================================================================================================*/
-  .flexslider {
-	margin: 0 0 60px;
-	background: #fff;
-	border: 4px solid #fff;
+}
+.lSSlideWrapper {
+	max-width: 100%;
+	overflow: hidden;
 	position: relative;
-	zoom: 1;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-	-o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-	box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  }
-  .flexslider .slides {
-	zoom: 1;
-  }
-  .flexslider .slides img {
-	height: auto;
-	-moz-user-select: none;
-  }
-  .flex-viewport {
-	max-height: 2000px;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-  }
-  .loading .flex-viewport {
-	max-height: 300px;
-  }
-  @-moz-document url-prefix() {
-	.loading .flex-viewport {
-	  max-height: none;
-	}
-  }
-  .carousel li {
-	margin-right: 5px;
-  }
-  .flex-direction-nav {
-	*height: 0;
-  }
-  .flex-direction-nav a {
-	text-decoration: none;
-	display: block;
-	width: 40px;
-	height: 40px;
-	margin: -20px 0 0;
-	position: absolute;
-	top: 50%;
-	z-index: 10;
-	overflow: hidden;
+}
+.lSSlideWrapper > .lightSlider:after {
+	clear: both;
+}
+.lSSlideWrapper .lSSlide {
+	-webkit-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	-webkit-transition: all 1s;
+	-webkit-transition-property: -webkit-transform,height;
+	-moz-transition-property: -moz-transform,height;
+	transition-property: transform,height;
+	-webkit-transition-duration: inherit !important;
+	transition-duration: inherit !important;
+	-webkit-transition-timing-function: inherit !important;
+	transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade {
+	position: relative;
+}
+.lSSlideWrapper .lSFade > * {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	margin-right: 0;
+	width: 100%;
+}
+.lSSlideWrapper.usingCss .lSFade > * {
 	opacity: 0;
-	cursor: pointer;
-	color: rgba(0, 0, 0, 0.8);
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-  }
-  .flex-direction-nav a:before {
-	font-family: "flexslider-icon";
-	font-size: 40px;
-	display: inline-block;
-	content: '\f001';
-	color: rgba(0, 0, 0, 0.8);
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  }
-  .flex-direction-nav a.flex-next:before {
-	content: '\f002';
-  }
-  .flex-direction-nav .flex-prev {
-	left: -50px;
-  }
-  .flex-direction-nav .flex-next {
-	right: -50px;
-	text-align: right;
-  }
-  .flexslider:hover .flex-direction-nav .flex-prev {
-	opacity: 0.7;
-	left: 10px;
-  }
-  .flexslider:hover .flex-direction-nav .flex-prev:hover {
-	opacity: 1;
-  }
-  .flexslider:hover .flex-direction-nav .flex-next {
-	opacity: 0.7;
-	right: 10px;
-  }
-  .flexslider:hover .flex-direction-nav .flex-next:hover {
-	opacity: 1;
-  }
-  .flex-direction-nav .flex-disabled {
-	opacity: 0!important;
-	filter: alpha(opacity=0);
-	cursor: default;
-	z-index: -1;
-  }
-  .flex-pauseplay a {
-	display: block;
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	bottom: 5px;
-	left: 10px;
-	opacity: 0.8;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transition-duration: inherit !important;
+	transition-duration: inherit !important;
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-timing-function: inherit !important;
+	transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade > *.active {
 	z-index: 10;
-	overflow: hidden;
-	cursor: pointer;
-	color: #000;
-  }
-  .flex-pauseplay a:before {
-	font-family: "flexslider-icon";
-	font-size: 20px;
-	display: inline-block;
-	content: '\f004';
-  }
-  .flex-pauseplay a:hover {
+}
+.lSSlideWrapper.usingCss .lSFade > *.active {
 	opacity: 1;
-  }
-  .flex-pauseplay a.flex-play:before {
-	content: '\f003';
-  }
-  .flex-control-nav {
-	width: 100%;
-	position: absolute;
-	bottom: -40px;
+}
+/** /!!! End of core css Should not edit !!!/**/
+
+/* Pager */
+.lSSlideOuter .lSPager.lSpg {
+	margin: 10px 0 0;
+	padding: 0;
 	text-align: center;
-  }
-  .flex-control-nav li {
-	margin: 0 6px;
+}
+.lSSlideOuter .lSPager.lSpg > li {
+	cursor: pointer;
 	display: inline-block;
-	zoom: 1;
-	*display: inline;
-  }
-  .flex-control-paging li a {
-	width: 11px;
-	height: 11px;
-	display: block;
-	background: #666;
-	background: rgba(0, 0, 0, 0.5);
-	cursor: pointer;
-	text-indent: -9999px;
-	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-	-o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-  }
-  .flex-control-paging li a:hover {
-	background: #333;
-	background: rgba(0, 0, 0, 0.7);
-  }
-  .flex-control-paging li a.flex-active {
-	background: #000;
-	background: rgba(0, 0, 0, 0.9);
-	cursor: default;
-  }
-  .flex-control-thumbs {
-	margin: 5px 0 0;
-	position: static;
+	padding: 0 5px;
+}
+.lSSlideOuter .lSPager.lSpg > li a {
+	background-color: #222222;
+	border-radius: 30px;
+	display: inline-block;
+	height: 8px;
 	overflow: hidden;
-  }
-  .flex-control-thumbs li {
-	width: 25%;
-	float: left;
+	text-indent: -999em;
+	width: 8px;
+	position: relative;
+	z-index: 99;
+	-webkit-transition: all 0.5s linear 0s;
+	transition: all 0.5s linear 0s;
+}
+.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
+	background-color: #428bca;
+}
+.lSSlideOuter .media {
+	opacity: 0.8;
+}
+.lSSlideOuter .media.active {
+	opacity: 1;
+}
+/* End of pager */
+
+/** Gallery */
+.lSSlideOuter .lSPager.lSGallery {
+	list-style: none outside none;
+	padding-left: 0;
 	margin: 0;
-  }
-  .flex-control-thumbs img {
-	width: 100%;
-	height: auto;
-	display: block;
-	opacity: .7;
-	cursor: pointer;
+	overflow: hidden;
+	transform: translate3d(0px, 0px, 0px);
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-ms-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate3d(0px, 0px, 0px);
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
 	-moz-user-select: none;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-  }
-  .flex-control-thumbs img:hover {
-	opacity: 1;
-  }
-  .flex-control-thumbs .flex-active {
-	opacity: 1;
-	cursor: default;
-  }
-  /* ====================================================================================================================
-   * RESPONSIVE
-   * ====================================================================================================================*/
-  @media screen and (max-width: 860px) {
-	.flex-direction-nav .flex-prev {
-	  opacity: 1;
-	  left: 10px;
+	-ms-user-select: none;
+	user-select: none;
+}
+.lSSlideOuter .lSPager.lSGallery li {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+	transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+}
+.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		width: 184px; height: 90px;
+		left: 0; top: 0;
+		border: 3px solid #f6ff00;
 	}
-	.flex-direction-nav .flex-next {
-	  opacity: 1;
-	  right: 10px;
+}
+.lSSlideOuter .lSPager.lSGallery img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+.lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
+	content: " ";
+	display: table;
+}
+.lSSlideOuter .lSPager.lSGallery:after {
+	clear: both;
+}
+/* End of Gallery*/
+
+/* slider actions */
+.lSAction > a {
+	width: 43px;
+	display: block;
+	top: 50%;
+	height: 43px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 99;
+	margin-top: -16px;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.35s linear 0s;
+	transition: opacity 0.35s linear 0s;
+}
+.lSAction > a:hover {
+	opacity: 1;
+}
+.lSAction > .lSPrev {
+	background: url('../img/pc/icon_go_left.png') 0 0 no-repeat;
+	left: 10px;
+}
+.lSAction > .lSNext {
+	background: url('../img/pc/icon_go_right.png') 0 0 no-repeat;
+	right: 10px;
+}
+.lSAction > a.disabled {
+	pointer-events: none;
+}
+.cS-hidden {
+	height: 1px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	overflow: hidden;
+}
+
+
+/* vertical */
+.lSSlideOuter.vertical {
+	position: relative;
+}
+.lSSlideOuter.vertical.noPager {
+	padding-right: 0px !important;
+}
+.lSSlideOuter.vertical .lSGallery {
+	position: absolute !important;
+	right: 0;
+	top: 0;
+}
+.lSSlideOuter.vertical .lightSlider > * {
+	width: 100% !important;
+	max-width: none !important;
+}
+
+/* vertical controlls */
+.lSSlideOuter.vertical .lSAction > a {
+	left: 50%;
+	margin-left: -14px;
+	margin-top: 0;
+}
+.lSSlideOuter.vertical .lSAction > .lSNext {
+	background-position: 31px -31px;
+	bottom: 10px;
+	top: auto;
+}
+.lSSlideOuter.vertical .lSAction > .lSPrev {
+	background-position: 0 -31px;
+	bottom: auto;
+	top: 10px;
+}
+/* vertical */
+
+
+/* Rtl */
+.lSSlideOuter.lSrtl {
+	direction: rtl;
+}
+.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+	padding-left: 0;
+	list-style: none outside none;
+}
+.lSSlideOuter.lSrtl .lightSlider, .lSSlideOuter.lSrtl .lSPager {
+	padding-right: 0;
+}
+.lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
+	float: left;
+}
+.lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
+	float: right !important;
+}
+/* Rtl */
+
+@-webkit-keyframes rightEnd {
+	0% {
+			left: 0;
 	}
-  }
-  
+
+	50% {
+			left: -15px;
+	}
+
+	100% {
+			left: 0;
+	}
+}
+@keyframes rightEnd {
+	0% {
+			left: 0;
+	}
+
+	50% {
+			left: -15px;
+	}
+
+	100% {
+			left: 0;
+	}
+}
+@-webkit-keyframes topEnd {
+	0% {
+			top: 0;
+	}
+
+	50% {
+			top: -15px;
+	}
+
+	100% {
+			top: 0;
+	}
+}
+@keyframes topEnd {
+	0% {
+			top: 0;
+	}
+
+	50% {
+			top: -15px;
+	}
+
+	100% {
+			top: 0;
+	}
+}
+@-webkit-keyframes leftEnd {
+	0% {
+			left: 0;
+	}
+
+	50% {
+			left: 15px;
+	}
+
+	100% {
+			left: 0;
+	}
+}
+@keyframes leftEnd {
+	0% {
+			left: 0;
+	}
+
+	50% {
+			left: 15px;
+	}
+
+	100% {
+			left: 0;
+	}
+}
+@-webkit-keyframes bottomEnd {
+	0% {
+			bottom: 0;
+	}
+
+	50% {
+			bottom: -15px;
+	}
+
+	100% {
+			bottom: 0;
+	}
+}
+@keyframes bottomEnd {
+	0% {
+			bottom: 0;
+	}
+
+	50% {
+			bottom: -15px;
+	}
+
+	100% {
+			bottom: 0;
+	}
+}
+.lSSlideOuter .rightEnd {
+	-webkit-animation: rightEnd 0.3s;
+	animation: rightEnd 0.3s;
+	position: relative;
+}
+.lSSlideOuter .leftEnd {
+	-webkit-animation: leftEnd 0.3s;
+	animation: leftEnd 0.3s;
+	position: relative;
+}
+.lSSlideOuter.vertical .rightEnd {
+	-webkit-animation: topEnd 0.3s;
+	animation: topEnd 0.3s;
+	position: relative;
+}
+.lSSlideOuter.vertical .leftEnd {
+	-webkit-animation: bottomEnd 0.3s;
+	animation: bottomEnd 0.3s;
+	position: relative;
+}
+.lSSlideOuter.lSrtl .rightEnd {
+	-webkit-animation: leftEnd 0.3s;
+	animation: leftEnd 0.3s;
+	position: relative;
+}
+.lSSlideOuter.lSrtl .leftEnd {
+	-webkit-animation: rightEnd 0.3s;
+	animation: rightEnd 0.3s;
+	position: relative;
+}
+/*/  GRab cursor */
+.lightSlider.lsGrab > * {
+cursor: -webkit-grab;
+cursor: -moz-grab;
+cursor: -o-grab;
+cursor: -ms-grab;
+cursor: grab;
+}
+.lightSlider.lsGrabbing > * {
+cursor: move;
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+cursor: -o-grabbing;
+cursor: -ms-grabbing;
+cursor: grabbing;
+}
+

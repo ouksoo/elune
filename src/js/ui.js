@@ -228,7 +228,7 @@ var fallscroll;
         effect : 'fade-scale', /* 'slide-horizontal', 'slide-vertical', 'fade-scale', */			
         panel : '.fall-section', /* section들 */			
         panelChageSpeed : 700, /* section전환 속도 */			
-        panelChageDelay : 250, /* section전환 완료 후 다음 전환 이벤트 입력 딜레이, 최소 200ms */			
+        panelChageDelay : 500, /* section전환 완료 후 다음 전환 이벤트 입력 딜레이, 최소 200ms */			
         loop : false, /* section 순환 여부 */			
         hashURL : true, /* hash 사용 여부 */			
         defaultIndex : 0, /* 첫 페이지 설정 */			

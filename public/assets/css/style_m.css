@@ -1,0 +1,27 @@
+/********************** 
+* val
+***********************/
+/********************** 
+* layout
+***********************/
+div.wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+/********************** 
+* header
+***********************/
+/********************** 
+* footer
+***********************/
+/********************** 
+* globals
+***********************/
+*:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVfbS5jc3MiLCJzb3VyY2VzIjpbInN0eWxlX20uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7d0JBRXdCO0FBS3hCOzt3QkFFd0I7QUFDeEIsQUFBQSxHQUFHLEFBQUEsUUFBUSxDQUFDO0VBQ1IsUUFBUSxFQUFFLFFBQVE7RUFDbEIsTUFBTSxFQUFFLE1BQU07Q0FLakI7O0FBRUQ7O3dCQUV3QjtBQUt4Qjs7d0JBRXdCO0FBS3hCOzt3QkFFd0I7QUFFeEIsQUFBQSxDQUFDLEFBQUEsTUFBTSxDQUFDO0VBQ0osT0FBTyxFQUFFLElBQUk7Q0FDaEIifQ== */
+
+/*# sourceMappingURL=style_m.css.map */

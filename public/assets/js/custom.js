@@ -65,40 +65,141 @@ var ELUNE = {
         });
     },
     utils: function utils() {
+
         $('header div.games, header div.submenus').on('mouseover', function () {
             $('header div.submenus').stop().fadeIn(100);
-        }), $('header div.games, header div.submenus').on('mouseout', function () {
+        });
+        $('header div.games, header div.submenus').on('mouseout', function () {
             $('header div.submenus').stop().fadeOut(100);
-        }),
+        });
+
+        // 개인정보 수집 및 이용동의
+        $('a.private-view').on('click', function (e) {
+            $('div.movie-dimmed, div#privateAgreement').fadeIn('fast');
+            fallscroll.lockWheelEvent();
+            e.preventDefault();
+        });
+
+        // 개인정보 처리 위탁동의
+        $('a.private-agree').on('click', function (e) {
+
+            fallscroll.lockWheelEvent();
+            e.preventDefault();
+        });
+
+        // 게임빌 게임 출시 및 업데이트, 각종 이벤트 광고 알림 수신 동의
+        $('a.gamevil-update').on('click', function (e) {
+            $('div.movie-dimmed, div#gameUpateEvent').fadeIn('fast');
+            fallscroll.lockWheelEvent();
+            e.preventDefault();
+        });
+
+        // popup 닫기 공통
+        $('a.popup-close').on('click', function (e) {
+            $('div.movie-dimmed, div.popup').fadeOut('fast');
+            fallscroll.unlockWheelEvent();
+            e.preventDefault();
+        });
+
+        // 사전예약 버튼 
+        $('a.advance-reserve').on('click', function (e) {
+            fallscroll.goto(1);
+            e.preventDefault();
+        });
+
         // moive global
-        $('a#movieplay').on('click', function () {
+        $('a.movieplay').on('click', function (e) {
             var thisMovie = $(this).data('movie');
             var movieAddress = void 0;
+
+            console.log(thisMovie);
             if (thisMovie == 'intro') {
-                movieAddress = '<iframe width="960" height="539" src="https://www.youtube.com/embed/w8D7lLpO4nU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                movieAddress = 'https://www.youtube.com/embed/1yvVH1pE7IA?autoplay=1&autohide=1&nohtml5=1&controls=1&loop=1&rel=0&fs=1&wmode=transparent&showinfo=0&modestbranding=1&iv_load_policy=1&start=0&theme=dark&vq=hd1080&color=red&enablejsapi=1';
+            }
+            if (thisMovie == 'multi-1') {
+                movieAddress = 'https://www.youtube.com/embed/DeOF5mHskDc?autoplay=1&autohide=1&nohtml5=1&controls=1&loop=1&rel=0&fs=1&wmode=transparent&showinfo=0&modestbranding=1&iv_load_policy=1&start=0&theme=dark&vq=hd1080&color=red&enablejsapi=1';
             }
 
-            var mov = setTimeout(function () {
-                $('div.inner-movie').html(movieAddress);
-                $('div.youtube-wrap').fadeIn(10, function () {
-                    $('div.youtube-wrap').addClass('on');
-                });
+            $('div.inner-movie iframe').attr('src', movieAddress);
+            $('div.movie-dimmed, div.youtube-wrap').fadeIn(function () {
+                fallscroll.lockWheelEvent();
+            });
 
-                $('div.youtube-wrap a.movie-close').on('click', function () {
-                    $('div.youtube-wrap').removeClass('on');
+            $('div.youtube-wrap a.movie-close').on('click', function (evt) {
+                $('div.movie-dimmed, div.youtube-wrap').fadeOut(function () {
+                    $('div.inner-movie iframe').attr('src', '');
                 });
-            }, 500);
+                fallscroll.unlockWheelEvent();
+                evt.preventDefault();
+            });
+
+            e.preventDefault();
+
+            // const mov = setTimeout(function() {
+            //     $('div.inner-movie').html(movieAddress);
+            //     $('div.youtube-wrap').fadeIn(10, function() {
+            //         $('div.youtube-wrap').addClass('on');
+            //     });
+
+            //     $('div.youtube-wrap a.movie-close').on('click', function() {
+            //         $('div.inner-movie').empty();
+            //         $('div.youtube-wrap').removeClass('on');
+            //     });
+            // }, 500);
         });
 
         // Can also be used with $(document).ready()
-        $('.flexslider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails"
+        $('#contentGallery-1').lightSlider({
+            gallery: true,
+            item: 1,
+            loop: true,
+            slideMargin: 0,
+            thumbItem: 4,
+            thumbMargin: 10,
+            enableTouch: false,
+            enableDrag: false,
+            freeMove: false,
+            swipeThreshold: 40
+        });
+        $('#contentGallery-2').lightSlider({
+            gallery: true,
+            item: 1,
+            loop: true,
+            slideMargin: 0,
+            thumbItem: 4,
+            thumbMargin: 10,
+            enableTouch: false,
+            enableDrag: false,
+            freeMove: false,
+            swipeThreshold: 40
         });
 
-        $('.wowslider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails"
+        //character tab
+        $('div.character-wrap .man-tab a, div.character-wrap .thumb a').on('click', function (e) {
+            var thisNum = $(this).data('num');
+            var thisKind = $(this).data('kind');
+            if (thisKind) {
+                console.log(thisKind);
+                $('div.character-wrap .man-tab a').each(function () {
+                    $(this).removeClass('on');
+                });
+                $(this).addClass('on');
+            }
+            $('.character-wrap .ch-info').css('display', 'none');
+            $('#characterInfo-' + thisNum).css('display', 'block');
+            e.preventDefault();
+        });
+
+        //multimeida content tab
+        $('.multimedia-tab a').on('click', function (e) {
+            var thisNum = $(this).data('num');
+            $('.multimedia-tab a').each(function () {
+                $(this).removeClass('on');
+            });
+            $(this).addClass('on');
+            $('.content-wrap .gallery-wrap').css('display', 'none');
+            $('#multimediaContent-' + thisNum).css('display', 'block');
+            e.preventDefault();
         });
     }
 
