@@ -254,15 +254,39 @@ div.wrapper {
         
         div.fall-contents {
             width: 100%; height: 100%;
-            background: url('../img/pc/bg_3.jpg') 50% 50% no-repeat;
-            background-size: cover;
-    
+            // background: url('../img/pc/pc_background_test2.png') 50% 50% no-repeat;
+            // background-size: cover;
+            
+            div.scene_bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                background: url('../img/pc/pc_background_test1.png') 50% 50% no-repeat;
+                background-size: cover; 
+                z-index: 2;
+            }
+            div.bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: -100px; top: 0;
+                background: url('../img/pc/pc_background_test2.png') 50% 50% no-repeat;
+                background-size: cover; 
+                transform: scale(1.2);
+                transition: transform 1.2s ease-in-out, left 1s ease-in-out;
+                z-index: 1;
+
+                &.on {
+                    transform: scale(1);
+                    left: 0;
+                }
+            }
             div.world-wrap {
                 position: absolute;
                 width: 860px; height: 560px;
                 background: url('../img/pc/bg_world.png') 50% 50% no-repeat;
                 left: 50%; top: 50%;
                 margin: -260px 0 0 -430px;
+                z-index: 3;
 
                 p {
                     font-size: 16px;

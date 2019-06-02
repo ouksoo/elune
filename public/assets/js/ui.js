@@ -235,6 +235,12 @@ var fallscroll;
 		onSectionChangeStart: function onSectionChangeStart(fs) {
 			/* 섹션 전환이 시작될 때 */
 			init(fs.nextIndex);
+			if (fs.nextIndex === 2) {
+				//세계관
+				$('#section2 div.bg').addClass('on');
+			} else {
+				$('#section2 div.bg').removeClass('on');
+			}
 		},
 		onSectionChangeEnd: function onSectionChangeEnd(fs) {
 			/* 섹션 전환이 완료될 때 */
