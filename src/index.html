@@ -18,7 +18,7 @@
 <div class="player-popup youtube-wrap" style="display: none">
     <a href="#" class="movie-close">닫기</a>
     <div class="inner-movie">
-        <iframe src="" width="960" height="539" frameborder="0" allowfullscreen></iframe>
+        <iframe src="" width="960" height="539" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     </div>
 </div>
 
@@ -141,7 +141,7 @@
                                 
                                 <div id="fall-video">
                                     <video id="player" autoplay="" muted="" loop="" playsinline="">
-                                        <source src="https://nxm-mt.akamaized.net/Contents/overhit.nexon.com/brand/assets/vod/bg_movie_main.mp4" type="video/mp4"> 
+                                        <source src="assets/img/pc/video.mp4" type="video/mp4"> 
                                     </video>
                                     <div class="fall-video-cover"></div>
                                 </div>
@@ -192,7 +192,7 @@
                                                     <img src="assets/img/pc/txt_ios.png" alt="" />
                                                 </div>
                                                 <div class="input-info">
-                                                    <input type="text" placeholder="휴대폰 번호를 “ – “ 없이 입력하세요" /><a href="#" class="btn-apply"><img src="assets/img/pc/btn_apply.png" alt="" /></a>
+                                                    <input type="number" maxlength="11" placeholder="휴대폰 번호를 “ – “ 없이 입력하세요" /><a href="#" class="btn-apply"><img src="assets/img/pc/btn_apply.png" alt="" /></a>
                                                 </div>
                                                 <div class="agree clearfix">
                                                     <p>
@@ -279,7 +279,7 @@
                             <div class="fall-contents fake-box-contents">
                                 <div class="fall-inner fake-box-inner">
                                     <div class="character-wrap">
-                                    <ul class="man-tab clearfix">
+                                        <ul class="man-tab clearfix">
                                             <li><a href="#" data-num="1-1" data-kind="1" class="on">메타</a></li>
                                             <li><a href="#" data-num="2-1" data-kind="2">아스토리아</a></li>
                                             <li><a href="#" data-num="3-1" data-kind="3">스타쉽</a></li>
@@ -287,10 +287,35 @@
                                             <li><a href="#" data-num="5-1" data-kind="5">하늘산</a></li>
                                             <li><a href="#" data-num="6-1" data-kind="6">아이스로드</a></li>
                                             <li><a href="#" data-num="7-1" data-kind="7">바타</a></li>
-                                    </ul>
+                                        </ul>
 
-                                    <!--메타/발드르-->
-                                    <div id="characterInfo-1-1" class="ch-info">
+                                        <!-- 캐릭터 이미지-->
+                                        <div class="character-image">
+                                            <img class="img-cha-1-1" src="assets/img/pc/ch/img_character_1.png" alt="" style="display: block" />
+                                            <img class="img-cha-1-2" src="assets/img/pc/ch/img_character_2.png" alt="" />
+                                            <img class="img-cha-1-3" src="assets/img/pc/ch/img_character_3.png" alt="" />
+                                            <img class="img-cha-2-1" src="assets/img/pc/ch/img_character_4.png" alt="" />
+                                            <img class="img-cha-2-2" src="assets/img/pc/ch/img_character_5.png" alt="" />
+                                            <img class="img-cha-2-3" src="assets/img/pc/ch/img_character_6.png" alt="" />
+                                            <img class="img-cha-3-1" src="assets/img/pc/ch/img_character_7.png" alt="" />
+                                            <img class="img-cha-3-2" src="assets/img/pc/ch/img_character_8.png" alt="" />
+                                            <img class="img-cha-3-3" src="assets/img/pc/ch/img_character_9.png" alt="" />
+                                            <img class="img-cha-4-1" src="assets/img/pc/ch/img_character_10.png" alt="" />
+                                            <img class="img-cha-4-2" src="assets/img/pc/ch/img_character_11.png" alt="" />
+                                            <img class="img-cha-4-3" src="assets/img/pc/ch/img_character_12.png" alt="" />
+                                            <img class="img-cha-5-1" src="assets/img/pc/ch/img_character_13.png" alt="" />
+                                            <img class="img-cha-5-2" src="assets/img/pc/ch/img_character_14.png" alt="" />
+                                            <img class="img-cha-5-3" src="assets/img/pc/ch/img_character_15.png" alt="" />
+                                            <img class="img-cha-6-1" src="assets/img/pc/ch/img_character_16.png" alt="" />
+                                            <img class="img-cha-6-2" src="assets/img/pc/ch/img_character_17.png" alt="" />
+                                            <img class="img-cha-6-3" src="assets/img/pc/ch/img_character_18.png" alt="" />
+                                            <img class="img-cha-7-1" src="assets/img/pc/ch/img_character_19.png" alt="" />
+                                            <img class="img-cha-7-2" src="assets/img/pc/ch/img_character_20.png" alt="" />
+                                            <img class="img-cha-7-3" src="assets/img/pc/ch/img_character_21.png" alt="" />
+                                        </div>
+
+                                        <!--메타/발드르-->
+                                        <div id="characterInfo-1-1" class="ch-info">
                                             <p class="f">
                                                 <span class="name">발드르</span><span class="info">남/27/사도</span>
                                             </p>
@@ -308,11 +333,11 @@
                                                 <a href="#" data-num="1-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
                                                 <a href="#" data-num="1-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
                                         <!--메타/프레이야-->
                                         <div id="characterInfo-1-2" class="ch-info" style="display: none">
                                             <p class="f">
-                                                <span class="name">프레이야</span><span class="info">남/27/사도</span>
+                                                <span class="name">프레이야</span><span class="info">여/29/사도</span>
                                             </p>
                                             <p class="s">
                                                 프레이야는 인간 아버지와 엘프 어머니 사이에서 태어난 하프 엘프로서 신성 마법에 관해서라면 따를 자가 없는 우수한 재원이다.<br />
@@ -328,8 +353,8 @@
                                                 <a href="#" data-num="1-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
                                             </div>
                                         </div>
-                                    <!--메타/맥카티-->
-                                    <div id="characterInfo-1-3" class="ch-info" style="display:none">
+                                        <!--메타/맥카티-->
+                                        <div id="characterInfo-1-3" class="ch-info" style="display:none">
                                             <p class="f">
                                                 <span class="name">맥카티</span><span class="info">남/300/사도</span>
                                             </p>
@@ -346,10 +371,10 @@
                                                 <a href="#" data-num="1-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
                                                 <a href="#" data-num="1-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
 
-                                    <!--아스토리아/세라핀느-->
-                                    <div id="characterInfo-2-1" class="ch-info" style="display: none">
+                                        <!--아스토리아/세라핀느-->
+                                        <div id="characterInfo-2-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">세라핀느</span><span class="info">여/22/보물 사냥꾼</span>
                                             </p>
@@ -361,13 +386,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="4"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="2-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="2-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="2-1" class="on"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--아스토리아/오웬-->
-                                    <div id="characterInfo-2-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--아스토리아/오웬-->
+                                        <div id="characterInfo-2-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">오웬</span><span class="info">남/45/우니오 부족장</span>
                                             </p>
@@ -379,13 +404,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="5"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="2-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="2-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="2-1"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2" class="on"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--아스토리아/미쉘-->
-                                    <div id="characterInfo-2-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--아스토리아/미쉘-->
+                                        <div id="characterInfo-2-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">미쉘</span><span class="info">여/172/알레리아 엘프</span>
                                             </p>
@@ -397,14 +422,14 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="6"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="1-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="1-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="1-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="2-1"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3" class="on"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
 
-                                    <!--스타쉽/캐롤라인-->
-                                    <div id="characterInfo-3-1" class="ch-info" style="display: none">
+                                        <!--스타쉽/캐롤라인-->
+                                        <div id="characterInfo-3-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">캐롤라인</span><span class="info">여/25/비적단 간부</span>
                                             </p>
@@ -416,13 +441,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="7"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="3-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="3-1" class="on"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--스타쉽/빅토리아-->
-                                    <div id="characterInfo-3-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--스타쉽/빅토리아-->
+                                        <div id="characterInfo-3-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">빅토리아</span><span class="info">여/25/비적단 간부</span>
                                             </p>
@@ -434,13 +459,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="8"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="3-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2" class="on"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--스타쉽/아르비다-->
-                                    <div id="characterInfo-3-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--스타쉽/아르비다-->
+                                        <div id="characterInfo-3-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">아르비다</span><span class="info">여/16/선장</span>
                                             </p>
@@ -452,14 +477,14 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="9"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="3-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3" class="on"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    
-                                    <!--하늘산/강림-->
-                                    <div id="characterInfo-4-1" class="ch-info" style="display: none">
+                                        </div>
+                                        
+                                        <!--하늘산/강림-->
+                                        <div id="characterInfo-4-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">강님</span><span class="info">중성/777/명계의 사신</span>
                                             </p>
@@ -471,13 +496,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="10"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="4-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="4-1" class="on"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--하늘산/마카즈키-->
-                                    <div id="characterInfo-4-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--하늘산/마카즈키-->
+                                        <div id="characterInfo-4-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">마카즈키</span><span class="info">여성/505/원령검사</span>
                                             </p>
@@ -489,13 +514,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="11"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="4-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2" class="on"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--하늘산/미호-->
-                                    <div id="characterInfo-4-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--하늘산/미호-->
+                                        <div id="characterInfo-4-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">미호</span><span class="info">여성/5/여우 요괴</span>
                                             </p>
@@ -507,14 +532,14 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="12"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="4-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3" class="on"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
 
-                                    <!--루멘/파비안-->
-                                    <div id="characterInfo-5-1" class="ch-info" style="display: none">
+                                        <!--루멘/파비안-->
+                                        <div id="characterInfo-5-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">파비안</span><span class="info">남/11/최연소 루멘교 사제</span>
                                             </p>
@@ -526,13 +551,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="13"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="5-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="5-1" class="on"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--루멘/에리스-->
-                                    <div id="characterInfo-5-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--루멘/에리스-->
+                                        <div id="characterInfo-5-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">에리스</span><span class="info">여/18/수호 기사단원</span>
                                             </p>
@@ -544,13 +569,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="14"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="5-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2" class="on"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--루멘/키루스-->
-                                    <div id="characterInfo-5-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--루멘/키루스-->
+                                        <div id="characterInfo-5-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">키루스</span><span class="info">남/29/수호 기사단장</span>
                                             </p>
@@ -562,14 +587,14 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="15"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="5-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3" class="on"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
 
-                                    <!--바타/카트나-->
-                                    <div id="characterInfo-6-1" class="ch-info" style="display: none">
+                                        <!--바타/카트나-->
+                                        <div id="characterInfo-6-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">카트나</span><span class="info">여/24/사막의 주술사</span>
                                             </p>
@@ -581,13 +606,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="16"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="6-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="6-1" class="on"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--바타/쿤하르-->
-                                    <div id="characterInfo-6-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--바타/쿤하르-->
+                                        <div id="characterInfo-6-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">쿤하르</span><span class="info">남/27/소국의 왕자</span>
                                             </p>
@@ -599,13 +624,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="17"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="6-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2" class="on"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--바타/타야-->
-                                    <div id="characterInfo-6-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--바타/타야-->
+                                        <div id="characterInfo-6-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">타야</span><span class="info">남/13/정령족 소년</span>
                                             </p>
@@ -617,14 +642,14 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="18"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="6-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3" class="on"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
                                             </div>
-                                    </div>
+                                        </div>
 
-                                    <!--아이스로드/아나로레-->
-                                    <div id="characterInfo-7-1" class="ch-info" style="display: none">
+                                        <!--아이스로드/아나로레-->
+                                        <div id="characterInfo-7-1" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">아나로레</span><span class="info">여/120/정령술사</span>
                                             </p>
@@ -636,13 +661,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="19"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="7-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="7-1" class="on"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--아이스로드/포포&페페-->
-                                    <div id="characterInfo-7-2" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--아이스로드/포포&페페-->
+                                        <div id="characterInfo-7-2" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">포포&페페</span><span class="info">남&여/13/마녀의 아이</span>
                                             </p>
@@ -654,13 +679,13 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="20"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="7-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2" class="on"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
                                             </div>
-                                    </div>
-                                    <!--아이스로드/세드나-->
-                                    <div id="characterInfo-7-3" class="ch-info" style="display: none">
+                                        </div>
+                                        <!--아이스로드/세드나-->
+                                        <div id="characterInfo-7-3" class="ch-info" style="display: none">
                                             <p class="f">
                                                 <span class="name">세드나</span><span class="info">여/18/룹족의 전사</span>
                                             </p>
@@ -672,12 +697,11 @@
                                             </p>
                                             <a href="#" class="movieplay" data-movie="21"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
                                             <div class="thumb clearfix">
-                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
-                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
-                                                <a href="#" data-num="7-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3" class="on"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
                                             </div>
-                                    </div>
-
+                                        </div>
 
                                     </div>
                                 </div>

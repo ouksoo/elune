@@ -293,6 +293,7 @@ div.wrapper {
                 ul.man-tab {
                     position: absolute;
                     top: 205px; left: 60px;
+                    z-index: 10;
                     
                     li {
                         float: left;
@@ -317,13 +318,23 @@ div.wrapper {
                         }
                     }
                 }
+                div.character-image {
+                    position: absolute;
+                    width: 620px; height: 560px;
+                    left: 480px; top: 185px;
+
+                    img {
+                        display: none;
+                    }
+                }
                 div.ch-info {
                     position: absolute;
-                    width: 550px; height: 300px;
-                    top: 340px; left: 75px;
+                    z-index: 9;
+                    width: 500px; height: 300px;
+                    top: 300px; left: 75px;
 
                     p.f {
-                        padding-bottom: 30px;
+                        padding-bottom: 20px;
 
                         span.name {
                             font-size: 36px;
@@ -342,6 +353,7 @@ div.wrapper {
                         color: #fff;
                         line-height: 24px;
                         letter-spacing: -1px;
+                        height: 120px;
                     }
                     p.t {
                         font-size: 14px;
@@ -354,7 +366,7 @@ div.wrapper {
                 div.thumb {
                     position: absolute;
                     width: 550px;
-                    top: 250px; left: 285px;
+                    top: 285px; left: 285px;
 
                     a {
                         float: left;
@@ -481,7 +493,7 @@ div.movie-dimmed {
 
     &.youtube-wrap {
         width: 960px; height: 539px;
-        margin: -268px 0 0 -480px;
+        margin: -267px 0 0 -480px;
         // transform: scale(0.6);
         // transition: transform 0.5s, opacity 0.3s;
         // opacity: 0;

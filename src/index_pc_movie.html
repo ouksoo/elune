@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+<link href="assets/css/common.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/jquery.mousewheel-3.1.13.min.js"></script>
+<script src="assets/js/fallscroll-1.1.js"></script>
+</head>
+<body class="fall-scale black intro vertical_scroll">
+
+<div class="movie-dimmed" style="display: none"></div>
+
+<div class="player-popup youtube-wrap" style="display: none">
+    <a href="#" class="movie-close">닫기</a>
+    <div class="inner-movie">
+        <iframe src="" width="960" height="539" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+</div>
+
+<!-- 개인정보 수집 및 이용 동의-->
+<div id="privateAgreement" class="popup agreement" style="display: none">
+    <a href="#" class="popup-close">닫기</a>
+    <div class="inner-agreement">
+        <p class="tit">개인정보 수집 및 이용 동의 (광고성 문자 수신 동의 포함)</p>
+        <p class="paragraph">
+            ㈜게임빌은 이벤트 진행을 위해 아래와 같은 개인정보를 수집하고 처리/위탁하고 있습니다. <br /><br />
+
+            [ 개인정보 수집 및 이용 안내 ]<br />
+            -   수집 및 이용 목적 : SMS/LMS를 통한 사전예약/출시/기타 게임빌 게임 관련 소식 전달<br />
+            -   수집되는 개인정보 : 휴대폰 번호, 기기 OS 정보<br />
+            -   개인정보의 보유 및 이용기간 : 이벤트 종료일부터 1년간 보유 및 이용, 고객지원 및 이력확인 등을 위해 6개월간 별도 보관 후 파기
+        </p>
+    </div>
+</div>
+
+<!-- 엘룬 사전 예약 이벤트 참여를 위한 개인정보 수집 및 이용동의문-->
+<div id="gameUpateEvent" class="popup agreement" style="display: none">
+    <a href="#" class="popup-close">닫기</a>
+    <div class="inner-agreement">
+        <p class="tit">엘룬 사전 예약 이벤트 참여를 위한 개인정보 수집 및 이용 동의문</p>
+        <p class="paragraph-long">
+            ㈜게임빌은 본 이벤트 진행을 위해 아래와 같이 개인정보를 수집 및 이용하고 하고자 합니다.<br />
+            내용을 자세히 읽으신 후 동의 여부를 결정하여 주십시오.<br /><br />
+            
+            1. 개인정보 수집 및 이용 (필수)<br />
+            1) 수집 및 이용 목적 : 이벤트 참여에 따른 보상 지급<br />
+            2) 수집 및 이용 항목 : 휴대폰 번호<br />
+            3) 보유 및 이용기간 : <strong>보상 지급 완료일로부터 30일</strong><br />
+            위의 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의하지 않을 경우 본 이벤트 참여에 제한을 받을 수 있습니다. <br /><br />
+            
+            2. 개인정보 처리 위탁 동의 (필수)<br />
+            ㈜게임빌은 탈리온 사전 예약 이벤트 진행을 위하여 개인정보를 다음과 같이 위탁 처리 합니다. <br /><br />
+            
+            - 수탁업체명: ㈜게임빌컴투스플랫폼 <br />
+            - 수탁업무 내용: 고객정보관리<br /><br />
+            
+            - 수탁업체명: (사)벤처기업협회<br />
+            - 수탁업무 내용 : 고객상담<br /><br />
+            
+            - 수탁업체명: LG유플러스<br />
+            - 수탁업무 내용 : 이벤트 진행 안내 및 SMS/LMS 발송<br /><br />
+            
+            - 수탁업체명: ㈜아이하트<br />
+            - 수탁업무 내용 : 이벤트 관련 고객상담 SMS 발송 업무 <br /><br />
+            <span>
+                3. 게임빌 게임 출시 및 업데이트, 각종 이벤트 광고 알림 수신 동의 (선택)<br />
+                1) 수집 및 이용 목적 : <strong>각 종 이벤트, 게임 혜택에 관한 안내</strong><br />
+                2) 수집 및 이용 항목 : 휴대폰 번호<br />
+                3) 보유 및 이용 기간 : <strong>본 이벤트 종료일로부터 6개월</strong><br />
+                위의 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의하지 않을 경우 이후 진행되는 각 종 이벤트 및 게임 혜택 안내에 제한을 받을 수 있습니다.
+            </span>
+        </p>
+    </div>
+</div>
+
+<!-- 신청완료 -->
+<div class="popup apply-ok" style="display: none">
+    <a href="#" class="popup-close">닫기</a>
+    <div class="inner-agreement">
+        <p class="tit">사전예약 신청이 완료되었습니다.</p>
+        <p class="paragraph">
+            [게임빌] 20XX년 XX월 XX일<br />
+            광고성 정보 수신을 동의 하였습니다.
+        </p>
+        <a href="#" class="confirm">확인</a>
+    </div>
+</div>
+
+<!-- 기타 같은폰트 한줄,두줄짜리 -->
+<div class="popup normal-popup" style="display: none">
+    <a href="#" class="popup-close">닫기</a>
+    <div class="inner-agreement">
+        <p class="text">사전예약 신청이 완료되었습니다.</p>
+        <a href="#" class="confirm">확인</a>
+    </div>
+</div>
+
+<div id="wrap" class="visible">
+    <div id="fall-scroll" class="fade-scale">
+
+        <div class="wrapper">
+            <!-- header -->
+            <header>
+                <a href="#section0" class="h1">엘룬</a>
+                <div class="navigation">
+                    <a href="#section1" class="hm-1">사전예약</a>
+                    <div class="games">
+                        게임소개
+                        <div class="submenus">
+                            <a href="#section2" class="hm-2">세계관</a><span></span><a href="#section3" class="hm-3">캐릭터</a><span></span><a href="#section4" class="hm-4">콘텐츠</a>
+                        </div>
+                    </div>
+                    <a href="#section5" class="hm-5">이벤트</a>
+                </div>
+                <a href="http://www.naver.com" target="_blank" class="go-cafe">공식 카페</a>
+            </header>
+            <!-- //header -->
+
+            <div id="paging">
+                <ul class="lnb-navi">
+                    <li><a href="#section0" class="on">홈으로</a></li>
+                    <li><a href="#section1">사전예약 신청</a></li>
+                    <li><a href="#section2">세계관</a></li>
+                    <li><a href="#section3">컨텐츠</a></li>
+                    <li><a href="#section4">케릭터</a></li>
+                    <li><a href="#section5">이벤트</a></li>
+                </ul>
+            </div>
+                
+            <section id="fall-scroll" class="fade-scale">
+                <!-- HOME -->
+                <div id="section0" class="fall-section active current">
+                    <div class="fall-section-scroll fake-hide-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                
+                                <div id="fall-video">
+                                    <video id="player" autoplay="" muted="" loop="" playsinline="">
+                                        <source src="assets/img/pc/video.mp4" type="video/mp4"> 
+                                    </video>
+                                    <div class="fall-video-cover"></div>
+                                </div>
+                                
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="inner">
+                                        <div class="intro-wrap">
+                                            <img src="assets/img/pc/intro_img_1.png" alt="" />
+                                            <a href="#" class="movieplay" data-movie="intro"><img src="assets/img/pc/intro_img_2.png" alt="" /></a>
+                                            <a href="#" class="advance-reserve"><img src="assets/img/pc/intro_img_3.png" alt="" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//HOME -->
+
+                <!-- 사전예약 신청 -->
+                <div id="section1" class="fall-section skip">
+                    <div class="fall-section-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                <div class="scene_bg"></div>
+                                <div class="bg"></div>
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="inner">
+                                        <div class="apply-wrap">
+                                            <div class="info-forms">
+                                                <div class="phone-kind">
+                                                    <span class="radiobox-default">
+                                                        <input type="radio" id="c1" name="c1" checked /><label for="c1"><span></span></label>
+                                                    </span>
+                                                    <img src="assets/img/pc/txt_android.png" alt="" />
+                                                    <span class="radiobox-default">
+                                                        <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                                    </span>
+                                                    <img src="assets/img/pc/txt_ios.png" alt="" />
+                                                </div>
+                                                <div class="input-info">
+                                                    <input type="number" maxlength="11" placeholder="휴대폰 번호를 “ – “ 없이 입력하세요" /><a href="#" class="btn-apply"><img src="assets/img/pc/btn_apply.png" alt="" /></a>
+                                                </div>
+                                                <div class="agree clearfix">
+                                                    <p>
+                                                        <span class="checkbox-default">
+                                                            <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+                                                        </span> 1. 개인정보 수집 및 이용 동의 (필수)
+                                                    </p>
+                                                    <a href="#" class="private-view">[자세히보기]</a>
+                                                </div>
+                                                <div class="agree clearfix">
+                                                    <p>
+                                                        <span class="checkbox-default">
+                                                            <input type="checkbox" id="a2" name="a2" /><label for="a2"><span></span></label>
+                                                        </span> 2. 개인정보 처리 위탁 동의 (필수)
+                                                    </p>
+                                                    <a href="#" class="private-agree">[자세히보기]</a>
+                                                </div>
+                                                <div class="agree clearfix">
+                                                    <p>
+                                                        <span class="checkbox-default">
+                                                            <input type="checkbox" id="a3" name="a3" /><label for="a3"><span></span></label>
+                                                        </span> 3. 게임빌 게임 출시 및 업데이트, 각종 이벤트 광고 알림 수신 동의 (선택)
+                                                    </p>
+                                                    <a href="#" class="gamevil-update">[자세히보기]</a>
+                                                </div>
+                                                <div class="txt-warn">
+                                                ※ 이벤트 참여자는 개인정보 수집 이용 및 처리 위탁 동의를 거부할 권리가 있습니다. <br />
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 동의하지 않을 경우 이벤트 참여 및 경품 수령이 제한됩니다.<br />
+                                                ※ (선택) 알림 수신에 동의하지 않으시더라도 해당 이벤트 참여에는 영향이 없습니다.<br />
+                                                ※ (선택) 알림의 수신을 원하지 않으시는 경우 언제든지 ARS(무료수신거부) 080-555-4263을 통해 거부하실 수 있습니다. 
+                                                </div>
+                                            </div>
+                                            <div class="apply-google">
+                                                <img src="assets/img/pc/img_apply.png" alt="" />
+                                            </div>
+                                            <div class="terms-txt">
+                                                <span>&lt;Terms of Use&gt;</span>
+                                                <p>
+                                                    ※ 게임이 공식 출시 되면, 등록된 전화번호를 통해 알림이 발송됩니다.<br />
+                                                    ※ 보상 아이템은 정식 출시 후, 30일 이내에 로그인 하면 우편함으로 보내집니다.<br />
+                                                    ※ 참여는 이용자 1명 당 1회로 제한 됩니다.<br />
+                                                    ※ 계정 당 하나의 캐릭터만 보상을 수령할 수 있으므로, 어떤 캐릭터에 보상을 받을 것인지 신중하게 선택해주세요.<br />
+                                                    ※ 적절하지 못한 방법으로 이벤트 참여 시에는 보상이 취소 될 수 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <img src="assets/img/pc/bg_2.jpg" alt="" width="100%" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //사전예약 신청 -->
+                <!-- 세계관 -->
+                <div id="section2" class="fall-section skip">
+                    <div class="fall-section-scroll hide-scroll fake-hide-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="world-wrap">
+                                        <p>
+                                        허와 혼돈의 태초의 우주에서 탄생한 창조자<br />
+                                        그가 질서로 만든 일곱개의 차원 아스토리아, 스타쉽, 하늘산, 루멘, 바타, 아이스로드, 검은별은 <br />
+                                        우주에 흩어져 독자적인 환경과 문화를 만들어 갔다.<br />
+                                        차원의 인류 중 영특하고 정의로운 몇몇은 신의 힘을 부여받은 자ㅡ'엘룬'이라 칭해지며<br />
+                                        차원을 다룰 수 있는 특별한 힘을 갖게 되었다.<br />
+                                        창조자와의 전투 끝에 다크스톤에 봉인된 마신 에레보스는<br /> 
+                                        뛰어난 엘룬들 '사도'로부터 감시 되지만<br />
+                                        어둠의 힘에 타락한 사도 루치펠에 의해 다크스톤은 차원에 뿔뿔히 흩어진다.<br /><br />
+                                        일곱 차원의 엘룬들은 다크스톤을 모아 오염된 차원을 정화하기 위한 차원 모험을 시작하게 되는데...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //세계관 -->
+                <!-- 컨텐츠 -->
+                <div id="section3" class="fall-section">
+                    <div class="fall-section-scroll hide-scroll fake-hide-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="character-wrap">
+                                        <ul class="man-tab clearfix">
+                                            <li><a href="#" data-num="1-1" data-kind="1" class="on">메타</a></li>
+                                            <li><a href="#" data-num="2-1" data-kind="2">아스토리아</a></li>
+                                            <li><a href="#" data-num="3-1" data-kind="3">스타쉽</a></li>
+                                            <li><a href="#" data-num="4-1" data-kind="4">루멘</a></li>
+                                            <li><a href="#" data-num="5-1" data-kind="5">하늘산</a></li>
+                                            <li><a href="#" data-num="6-1" data-kind="6">아이스로드</a></li>
+                                            <li><a href="#" data-num="7-1" data-kind="7">바타</a></li>
+                                        </ul>
+
+                                        <!-- 캐릭터 이미지-->
+                                        <div class="character-image">
+                                            <img class="img-cha-1-1" src="assets/img/pc/ch/img_character_1.png" alt="" style="display: block" />
+                                            <img class="img-cha-1-2" src="assets/img/pc/ch/img_character_2.png" alt="" />
+                                            <img class="img-cha-1-3" src="assets/img/pc/ch/img_character_3.png" alt="" />
+                                            <img class="img-cha-2-1" src="assets/img/pc/ch/img_character_4.png" alt="" />
+                                            <img class="img-cha-2-2" src="assets/img/pc/ch/img_character_5.png" alt="" />
+                                            <img class="img-cha-2-3" src="assets/img/pc/ch/img_character_6.png" alt="" />
+                                            <img class="img-cha-3-1" src="assets/img/pc/ch/img_character_7.png" alt="" />
+                                            <img class="img-cha-3-2" src="assets/img/pc/ch/img_character_8.png" alt="" />
+                                            <img class="img-cha-3-3" src="assets/img/pc/ch/img_character_9.png" alt="" />
+                                            <img class="img-cha-4-1" src="assets/img/pc/ch/img_character_10.png" alt="" />
+                                            <img class="img-cha-4-2" src="assets/img/pc/ch/img_character_11.png" alt="" />
+                                            <img class="img-cha-4-3" src="assets/img/pc/ch/img_character_12.png" alt="" />
+                                            <img class="img-cha-5-1" src="assets/img/pc/ch/img_character_13.png" alt="" />
+                                            <img class="img-cha-5-2" src="assets/img/pc/ch/img_character_14.png" alt="" />
+                                            <img class="img-cha-5-3" src="assets/img/pc/ch/img_character_15.png" alt="" />
+                                            <img class="img-cha-6-1" src="assets/img/pc/ch/img_character_16.png" alt="" />
+                                            <img class="img-cha-6-2" src="assets/img/pc/ch/img_character_17.png" alt="" />
+                                            <img class="img-cha-6-3" src="assets/img/pc/ch/img_character_18.png" alt="" />
+                                            <img class="img-cha-7-1" src="assets/img/pc/ch/img_character_19.png" alt="" />
+                                            <img class="img-cha-7-2" src="assets/img/pc/ch/img_character_20.png" alt="" />
+                                            <img class="img-cha-7-3" src="assets/img/pc/ch/img_character_21.png" alt="" />
+                                        </div>
+
+                                        <!--메타/발드르-->
+                                        <div id="characterInfo-1-1" class="ch-info">
+                                            <p class="f">
+                                                <span class="name">발드르</span><span class="info">남/27/사도</span>
+                                            </p>
+                                            <p class="s">
+                                                발드르는 자타가 인정하는 메타 제일의 검사로 <br />
+                                                화룡 파프니르의 힘이 담긴 검을 사용한다. 어렸을 적의 그는 잔병치레가 잦은 약골이었지만, <br />
+                                                꾸준한 노력 덕에 메타에서 제일가는 검사로 거듭날 수 있게 되었다.                                             
+                                            </p>
+                                            <p class="t">
+                                                한국CV 박서진<br />일본CV 우에키 신에이
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="1"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="1-1" class="on"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
+                                                <a href="#" data-num="1-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
+                                                <a href="#" data-num="1-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--메타/프레이야-->
+                                        <div id="characterInfo-1-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">프레이야</span><span class="info">여/29/사도</span>
+                                            </p>
+                                            <p class="s">
+                                                프레이야는 인간 아버지와 엘프 어머니 사이에서 태어난 하프 엘프로서 신성 마법에 관해서라면 따를 자가 없는 우수한 재원이다.<br />
+                                                전장을 누비며 부상자를 구호하던 그녀의 모습은 용맹한 전사들의 마음 속에 심상으로 새겨져 그녀를 여신에 가까운 존재로 각성시켰다.                                           
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이보희<br />일본CV 미야하라 사츠키
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="2"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="1-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
+                                                <a href="#" data-num="1-2" class="on"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
+                                                <a href="#" data-num="1-3"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--메타/맥카티-->
+                                        <div id="characterInfo-1-3" class="ch-info" style="display:none">
+                                            <p class="f">
+                                                <span class="name">맥카티</span><span class="info">남/300/사도</span>
+                                            </p>
+                                            <p class="s">
+                                                    맥카티는 메타 출신인 다른 사도들과는 다르게 스타쉽에서 나고 자란 건맨이다.<br />
+                                                    한 때 악명높은 카르텔의 수장이었던 그는 저주로 언데드가 되고 난 이후에 자신의 삶을 돌아보고 정의를 위해 싸우기 시작했다.                                          
+                                            </p>
+                                            <p class="t">
+                                                한국CV 서원석<br />일본CV 시라이시 켄토
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="3"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="1-1"><img src="assets/img/pc/ch/thumb_1.png" alt="" /></a>
+                                                <a href="#" data-num="1-2"><img src="assets/img/pc/ch/thumb_2.png" alt="" /></a>
+                                                <a href="#" data-num="1-3" class="on"><img src="assets/img/pc/ch/thumb_3.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                        <!--아스토리아/세라핀느-->
+                                        <div id="characterInfo-2-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">세라핀느</span><span class="info">여/22/보물 사냥꾼</span>
+                                            </p>
+                                            <p class="s">
+                                                세라핀느는 숲 밖의 세도가인 카탄 가문의 서녀로서 타고난 신체 능력과 뛰어난 상황판단 능력으로 가문을 부흥시켜왔다. 그러나 서녀라는 이유로 부모에게 냉대를 받자, 그녀는 부모에게 정식으로 인정받기 위하여 전설 속의 보물을 찾아 숲 속으로 들어오게 된다.                                           
+                                            </p>
+                                            <p class="t">
+                                                한국CV 박고운<br />일본CV 나카이 미코토
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="4"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="2-1" class="on"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--아스토리아/오웬-->
+                                        <div id="characterInfo-2-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">오웬</span><span class="info">남/45/우니오 부족장</span>
+                                            </p>
+                                            <p class="s">
+                                                골렘과 인간의 혼혈종인 오웬은 우니오 부족의 부족장으로서 우니오 전사들을 통솔하는 일을 맡고 있다. \\n그 역시 다른 숲 속의 사람들처럼 외부인을 경계하지만, 올곧은 마음과 합당한 실력을 갖추고 있는 자라면 언제든 마음을 열 준비가 되어 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 안효민<br />일본CV 에구치 타쿠야
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="5"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="2-1"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2" class="on"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--아스토리아/미쉘-->
+                                        <div id="characterInfo-2-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">미쉘</span><span class="info">여/172/알레리아 엘프</span>
+                                            </p>
+                                            <p class="s">
+                                                미쉘은 숲을 수호하는 알레리아 엘프의 일원으로서 조용한 숲 속에서 사색하기를 좋아한다. 그녀는 숲 밖의 인간은 탐욕스럽고 무례하다는 편견을 갖고 있으며, 그 때문에 외부인에게 매우 적대적이다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이재현<br />일본CV 카토 에미리
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="6"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="2-1"><img src="assets/img/pc/ch/thumb_4.png" alt="" /></a>
+                                                <a href="#" data-num="2-2"><img src="assets/img/pc/ch/thumb_5.png" alt="" /></a>
+                                                <a href="#" data-num="2-3" class="on"><img src="assets/img/pc/ch/thumb_6.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                        <!--스타쉽/캐롤라인-->
+                                        <div id="characterInfo-3-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">캐롤라인</span><span class="info">여/25/비적단 간부</span>
+                                            </p>
+                                            <p class="s">
+                                                커다란 함포를 등에 메고 싸우는 아르비다 비적단의 간부. 일리움의 빈민촌에서 불우한 유년기를 보냈기 때문에 말과 행동이 거칠다. 일이 없을때는 강렬한 로큰롤 음악을 즐겨들으며, 마음에 드는 것을 발견하면 그것이 무엇이든 ROCK이라고 통칭한다. 매사에 얌전을 떠는 빅토리아와는 앙숙관게처럼 보이지만, 의외로 죽이 잘 맞는 편이다.                                    
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이미나<br />일본CV 후지와라 나츠미
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="7"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="3-1" class="on"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--스타쉽/빅토리아-->
+                                        <div id="characterInfo-3-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">빅토리아</span><span class="info">여/25/비적단 간부</span>
+                                            </p>
+                                            <p class="s">
+                                                커다란 망치를 휘두르며 싸우는 아르바다 비적단의 간부. 전장에는 어울리지 않는 치렁치렁한 드레스는 입고 있는데, 이는 그녀가 귀족 출신을 차저하고 있기 떄문이다. 하지만 실제로는 캐롤라인과 같은 빈민촌 출신의 서민으로, 화가 나면 은연중에 원래의 거친 말투가 튀어나고이도 한다. 자신을 놀려대는 캐롤라인과 앙숙관계 처럼 보이지만, 의외로 죽이 잘 맞는 편이다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이미나<br />일본CV 노미즈 이오리
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="8"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2" class="on"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--스타쉽/아르비다-->
+                                        <div id="characterInfo-3-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">아르비다</span><span class="info">여/16/선장</span>
+                                            </p>
+                                            <p class="s">
+                                                아르비다는 일리움의 대해적 드레이크의 외동딸로, 아르비다 비적단을 홀로 이끄는 여걸이기도 하다. 과거 마법-기계 내전 당시 드레이크가 전장에서 급사하며 비적단이 분열의 위기에 놓이자, 아르비다는 타고난 용병술과 사격 솜씨로 남은 부하들을 휘어잡고 새로이 아르비다 비적단의 출범을 선언하였다. 그녀의 지휘 아래 아르비다 비적단은 크게 번창하였고, 아르비다의 이름은 선주들 사이에서 공포의 대명사로 쓰이게 되었다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 박지윤<br />일본CV 아이미
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="9"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="3-1"><img src="assets/img/pc/ch/thumb_7.png" alt="" /></a>
+                                                <a href="#" data-num="3-2"><img src="assets/img/pc/ch/thumb_8.png" alt="" /></a>
+                                                <a href="#" data-num="3-3" class="on"><img src="assets/img/pc/ch/thumb_9.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--하늘산/강림-->
+                                        <div id="characterInfo-4-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">강님</span><span class="info">중성/777/명계의 사신</span>
+                                            </p>
+                                            <p class="s">
+                                                하늘산을 유랑하며 죽은 자의 영혼을 수집하는 명계의 사신. 한 때는 명계의 왕이라고 불렸을 정도로 강력한 힘을 갖고 있었지만, 천자가 하늘산을 통일하고 긴 평화가 찾아오자 본래의 힘을 잃고 떠돌이처럼 살아가고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 장민혁<br />일본CV 나가츠카 타쿠마
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="10"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="4-1" class="on"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--하늘산/마카즈키-->
+                                        <div id="characterInfo-4-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">마카즈키</span><span class="info">여성/505/원령검사</span>
+                                            </p>
+                                            <p class="s">
+                                                아득한 옛날부터 하늘산에서 살아온 도깨비 검사. 한 때는 인간들과 협력하여 사악한 요괴를 무찌르고 천산궁을 세우는데 일조하기도 했지만, 그녀의 힘을 두려워 한 인간들에 의해 봉인되었다. 해모수의 도움으로 봉인에서 풀려나기는 했지만 여전히 인간을 증오하고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 김도영<br />일본CV 하야미 사오리
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="11"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2" class="on"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--하늘산/미호-->
+                                        <div id="characterInfo-4-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">미호</span><span class="info">여성/5/여우 요괴</span>
+                                            </p>
+                                            <p class="s">
+                                                무리에서 떨어진 어린 여우 요괴. 다른 여우 요괴들과는 달리 둔갑술이 미숙하여 인간 모습일 때도 팔다리의 일부가 여우털로 뒤덮여 있다. 오래전에 헤어진 오빠로부터 받은 여우 구슬을 소중히 여기고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이미나<br />일본CV 쿠기미야 리에
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="12"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="4-1"><img src="assets/img/pc/ch/thumb_10.png" alt="" /></a>
+                                                <a href="#" data-num="4-2"><img src="assets/img/pc/ch/thumb_11.png" alt="" /></a>
+                                                <a href="#" data-num="4-3" class="on"><img src="assets/img/pc/ch/thumb_12.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                        <!--루멘/파비안-->
+                                        <div id="characterInfo-5-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">파비안</span><span class="info">남/11/최연소 루멘교 사제</span>
+                                            </p>
+                                            <p class="s">
+                                                루멘교의 더 차일드 계획을 통해 양성된 소년 사제. 그는 루멘교 역사상 가장 어린 나이에 서품을 받은 사제이지만 다른 나이 많은 사제들에게도 뒤쳐지지 않는 순수한 신심을 갖고 있다. 그는 루멘교와 교황은 언제나 옳다는 절대적인 믿음을 갖고 있으며, 이러한 루멘의 체제를 뒤흔드려는 비밀 조직, 아이스픽을 적대시하고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이보희<br />일본CV 오오쿠보 루미
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="13"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="5-1" class="on"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--루멘/에리스-->
+                                        <div id="characterInfo-5-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">에리스</span><span class="info">여/18/수호 기사단원</span>
+                                            </p>
+                                            <p class="s">
+                                                루멘교의 사제들을 수호하는 수호기사단의 일원. 본래는 자유분방하고 활발한 성격의 소유자였으나, 부패를 반복하고 진실을 숨기려는 루멘교의 일상을 거듭 목도하며 점차 시니컬한 성격으로 변해갔다. 그녀는 노골적으로 루멘교를 저지하려고 행동하지는 않지만, 언제나 루멘 상층부를 향해 충성을 다하는 키루스와는 달리 주교들에게 비협조적으로 군다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이재현<br />일본CV 하야시 코코
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="14"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2" class="on"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--루멘/키루스-->
+                                        <div id="characterInfo-5-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">키루스</span><span class="info">남/29/수호 기사단장</span>
+                                            </p>
+                                            <p class="s">
+                                                루멘교의 사제들을 수호하는 수호기사단의 기사단장. 그는 귀족 가문 출신으로 처음에는 신을 모시고 정의를 행하기 위해 루멘 수호단에 들어왔지만, 오래 지나지 않아 주교들과 교황의 비리를 목도하게 된다. 그는 신의 이름으로 부정을 행하는 주교들에게 크게 실망하지만 체제를 무너뜨리는 대신 침묵을 택하고 묵묵히 자신의 일을 수행하기로 결심한다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 안효민<br />일본CV 타다 케이타
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="15"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="5-1"><img src="assets/img/pc/ch/thumb_13.png" alt="" /></a>
+                                                <a href="#" data-num="5-2"><img src="assets/img/pc/ch/thumb_14.png" alt="" /></a>
+                                                <a href="#" data-num="5-3" class="on"><img src="assets/img/pc/ch/thumb_15.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                        <!--바타/카트나-->
+                                        <div id="characterInfo-6-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">카트나</span><span class="info">여/24/사막의 주술사</span>
+                                            </p>
+                                            <p class="s">
+                                                제국의 변방 마을에서 모험자를 상대하며 살아가는 아름다운 무희. 카트나는 뱀과 같이 유연하고 아름다운 춤을 추는 것으로도 유명하지만, 독에 대한 이해도 높아 제국의 약초사들이 조언을 구하기 위해 종종 그녀를 찾아오기도 한다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 윤아영<br />일본CV 나카이 미코토
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="16"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="6-1" class="on"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--바타/쿤하르-->
+                                        <div id="characterInfo-6-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">쿤하르</span><span class="info">남/27/소국의 왕자</span>
+                                            </p>
+                                            <p class="s">
+                                                사막의 소왕국, 하투사의 왕자. 고귀한 신분을 타고 났지만 나라를 위해서라면 궂은 일도 마다하지 않아 국민들로부터의 신망이 높다. 왕국의 보물인 태양의 방패 라바르나를 솜씨 좋게 다루는 뛰어난 전사이기도 하다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이현<br />일본CV 바바 쥰페이
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="17"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2" class="on"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--바타/타야-->
+                                        <div id="characterInfo-6-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">타야</span><span class="info">남/13/정령족 소년</span>
+                                            </p>
+                                            <p class="s">
+                                                하투사에 사는 정령족 소년. 어린 나이이지만 명석하고 마법을 다루는 솜씨가 뛰어나 왕실의 자문을 맡고 있다. 하투사의 왕자인 쿤하르와는 젖먹이 때부터 알고 지낸 오랜 친구로서 신분과 나이를 뛰어넘은 우정을 과시하고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 윤아영<br />일본CV 아이사카 아카나
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="18"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="6-1"><img src="assets/img/pc/ch/thumb_16.png" alt="" /></a>
+                                                <a href="#" data-num="6-2"><img src="assets/img/pc/ch/thumb_17.png" alt="" /></a>
+                                                <a href="#" data-num="6-3" class="on"><img src="assets/img/pc/ch/thumb_18.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                        <!--아이스로드/아나로레-->
+                                        <div id="characterInfo-7-1" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">아나로레</span><span class="info">여/120/정령술사</span>
+                                            </p>
+                                            <p class="s">
+                                                하이엘프 마을의 정령술사. 특히 얼음을 부리는 정령술에 능하다. 본래 하이엘프는 다른 종족과 교류하지 않고 고립된 삶을 사는 것으로 알려져 있지만, 아나로레는 예외적으로 정령술을 배우기 위해 인간 마법사들과 정기적으로 교류를 하고 있다. 때문에 과거에 도움을 받은 마녀의 아이들이 찾아왔을 때도 그녀는 두 사람을 내치지 않고 따듯하게 받아주었다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이보희<br />일본CV 코바리 사키
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="19"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="7-1" class="on"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--아이스로드/포포&페페-->
+                                        <div id="characterInfo-7-2" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">포포&페페</span><span class="info">남&여/13/마녀의 아이</span>
+                                            </p>
+                                            <p class="s">
+                                                인간 마을에 살던 고명한 마법사의 자녀. 쌍둥이의 어머니는 한 때는 이름난 마녀로 인간들을 도왔으나, 그녀가 알 수 없는 이유로 죽자마자 사람들은 쌍둥이가 갖고 있는 마력을 이용해 복수할까봐 박해하기 시작했다. 마을에서 도망친 쌍둥이는 하이엘프의 마을에 정착해 살고 있으며, 아직도 인간에 대한 적개심을 버리지 못하고 있다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 박고운<br />일본CV 와카이 유우키
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="20"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2" class="on"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
+                                            </div>
+                                        </div>
+                                        <!--아이스로드/세드나-->
+                                        <div id="characterInfo-7-3" class="ch-info" style="display: none">
+                                            <p class="f">
+                                                <span class="name">세드나</span><span class="info">여/18/룹족의 전사</span>
+                                            </p>
+                                            <p class="s">
+                                                늑대를 부리는 룹족의 여전사. 영원한 겨울이 시작되었을 때 그녀는 늑대들과 함께 마을을 지키고 있었지만, 앞서 떠난 겨울 원정대가 거듭 원정에 실패하자 자신이 직접 나서기로 결심하였다. 그녀는 빙룡을 찾아 봄을 되찾아오겠다며 홀로 원정대를 꾸려 북쪽으로 떠난다.
+                                            </p>
+                                            <p class="t">
+                                                한국CV 이새아<br />일본CV 카토 에미리
+                                            </p>
+                                            <a href="#" class="movieplay" data-movie="21"><img src="assets/img/pc/btn_viewmovie.png" alt="" /></a>
+                                            <div class="thumb clearfix">
+                                                <a href="#" data-num="7-1"><img src="assets/img/pc/ch/thumb_19.png" alt="" /></a>
+                                                <a href="#" data-num="7-2"><img src="assets/img/pc/ch/thumb_20.png" alt="" /></a>
+                                                <a href="#" data-num="7-3" class="on"><img src="assets/img/pc/ch/thumb_21.png" alt="" /></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //컨텐츠 -->
+                <!-- 케릭터 -->
+                <div id="section4" class="fall-section">
+                    <div class="fall-section-scroll hide-scroll fake-hide-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="content-wrap">
+                                        <ul class="multimedia-tab clearfix">
+                                            <li><a href="#" data-num="1" class="on">스크린샷</a></li>
+                                            <li><a href="#" data-num="2">영상</a></li>
+                                        </ul>
+                                        <!--스크린샷-->
+                                        <div id="multimediaContent-1" class="gallery-wrap media-1">
+                                            <ul id="contentGallery-1">
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_1.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_2.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_3.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_4.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_1.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--동영상-->
+                                        <div id="multimediaContent-2" class="gallery-wrap media-2">
+                                            <ul id="contentGallery-2">
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_1.png">
+                                                    <a href="#" class="movieplay" data-movie="multi-1"><img src="assets/img/pc/multi/pic_1.png" /></a>
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_2.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_3.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_4.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                                <li data-thumb="assets/img/pc/multi/pic_thumb_1.png">
+                                                    <img src="assets/img/pc/multi/pic_1.png" />
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //케릭터 -->
+                <!-- 이벤트 -->
+                <div id="section5" class="fall-section">
+                    <div class="fall-section-scroll hide-scroll fake-hide-scroll">
+                        <div class="fall-container">
+                            <div class="fall-contents fake-box-contents">
+                                <div class="scene_bg"></div>
+                                <div class="fall-inner fake-box-inner">
+                                    <div class="event-wrap">
+                                        <div class="f">
+                                            <img src="assets/img/pc/img_event_1.png" alt="" /><img src="assets/img/pc/img_event_2.png" alt="" />
+                                        </div>
+                                        <a href="#"><img src="assets/img/pc/bn_cafe.png" alt="" /></a>
+                                        <p>
+                                            [ 이벤트 유의 사항 ]<br />
+                                            -  이벤트는 공식 카페에서 참여하실 수 있습니다.<br />
+                                            -  자세한 참여 방법과 보상은 공식 카페의 이벤트 공지를 통해 확인해주세요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //이벤트 -->
+                <div class="sound">
+                    <button type="button" class="btn_sound_controll pause"></button>
+                </div>
+            </section>
+
+            <!-- footer -->
+            <footer>
+                <p>GAMEVIL &copy;2019 GAMEVIL Inc. All Rights Reserved.</p>
+            </footer>
+            <!-- //footer -->
+            
+        </div>
+
+    </div>
+</div>
+
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/ui.js"></script>
+</body>
+</html>

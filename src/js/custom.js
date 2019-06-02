@@ -118,6 +118,9 @@ let ELUNE = {
             if(thisMovie == 'multi-1') {
                 movieAddress = 'https://www.youtube.com/embed/DeOF5mHskDc?autoplay=1&autohide=1&nohtml5=1&controls=1&loop=1&rel=0&fs=1&wmode=transparent&showinfo=0&modestbranding=1&iv_load_policy=1&start=0&theme=dark&vq=hd1080&color=red&enablejsapi=1';
             }
+            if(thisMovie == '1') {
+                movieAddress = 'https://www.youtube.com/embed/DeOF5mHskDc?autoplay=1&autohide=1&nohtml5=1&controls=1&loop=1&rel=0&fs=1&wmode=transparent&showinfo=0&modestbranding=1&iv_load_policy=1&start=0&theme=dark&vq=hd1080&color=red&enablejsapi=1';
+            }
 
             $('div.inner-movie iframe').attr('src', movieAddress);
             $('div.movie-dimmed, div.youtube-wrap').fadeIn(function() {
@@ -178,12 +181,13 @@ let ELUNE = {
             let thisNum = $(this).data('num');
             let thisKind = $(this).data('kind');
             if(thisKind) {
-                console.log(thisKind);
                 $('div.character-wrap .man-tab a').each(function() {
                     $(this).removeClass('on');
                 });
                 $(this).addClass('on');
             }
+            $('.character-image img').css('display','none');
+            $('.character-image img.img-cha-' + thisNum).css('display','block');
             $('.character-wrap .ch-info').css('display','none');
             $('#characterInfo-' + thisNum).css('display','block');
             e.preventDefault();
