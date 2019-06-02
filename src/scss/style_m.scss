@@ -183,7 +183,6 @@ div.wrapper {
                         margin: 25px 0 0 -160px;
 
                         img {
-                            display: none;
                             width: 100%;
                         }
                     }
@@ -209,6 +208,7 @@ div.wrapper {
                             font-weight: 700px;
                             color: #f6ff00;
                             margin-left: 10px;
+                            letter-spacing: -1px;
                         }
                     }
                     p.s {
@@ -593,6 +593,12 @@ div.movie-dimmed {
 }
 .border {
     border: 1px solid red;
+}
+.dp-b {
+    display: block !important; 
+}
+.dp-n {
+    display: none !important;
 }
 
 // default checkbox

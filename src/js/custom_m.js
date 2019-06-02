@@ -129,8 +129,8 @@ let ELUNE = {
                 });
                 $(this).addClass('on');
             }
-            $('.character-image img').css('display','none');
-            $('.character-image img.img-cha-' + thisNum).css('display','block');
+            $('.character-image img').addClass('dp-n');
+            $('.character-image img.img-cha-' + thisNum).removeClass('dp-n');;
             $('.area-character .ch-info').css('display','none');
             $('#characterInfo-' + thisNum).css('display','block');
             e.preventDefault();
