@@ -82,14 +82,14 @@ var ELUNE = {
 
         // 개인정보 처리 위탁동의
         $('a.private-agree').on('click', function (e) {
-
+            $('div.movie-dimmed, div#informationAgreement').fadeIn('fast');
             fallscroll.lockWheelEvent();
             e.preventDefault();
         });
 
         // 게임빌 게임 출시 및 업데이트, 각종 이벤트 광고 알림 수신 동의
         $('a.gamevil-update').on('click', function (e) {
-            $('div.movie-dimmed, div#gameUpateEvent').fadeIn('fast');
+            $('div.movie-dimmed, div#alramAgreement').fadeIn('fast');
             fallscroll.lockWheelEvent();
             e.preventDefault();
         });
