@@ -58,8 +58,27 @@ div.wrapper {
                 display: inline-block;
                 font-size: 18px;
                 color: #fff;
-                margin: 0 150px;
+                margin: 0 6%;
                 line-height: 78px;
+
+                &.hm-1 {
+                    width: 100px; 
+                    background: url('../img/pc/gnb_txt_1_off.png') 50% 50% no-repeat;
+                    text-indent: -9999px;
+
+                    &.active {
+                        background: url('../img/pc/gnb_txt_1_on.png') 50% 50% no-repeat; 
+                    }
+                }
+                &.hm-5 {
+                    width: 100px; 
+                    background: url('../img/pc/gnb_txt_3_off.png') 50% 50% no-repeat;
+                    text-indent: -9999px;
+
+                    &.active {
+                        background: url('../img/pc/gnb_txt_3_on.png') 50% 50% no-repeat;
+                    }
+                }
 
                 &.active {
                     color: #d9e340;
@@ -72,9 +91,11 @@ div.wrapper {
                 color: #fff;
                 margin: 0 150px;
                 line-height: 78px;
+                width: 100px;
+                background: url('../img/pc/gnb_txt_2_off.png') 50% 50% no-repeat;
 
                 &.active {
-                    color: #d9e340;
+                    background: url('../img/pc/gnb_txt_2_on.png') 50% 50% no-repeat;
                 }
                 div.submenus {
                     display: none;
@@ -141,10 +162,19 @@ div.wrapper {
             
             .intro-wrap {
                 position: absolute;
-                width: 656px; height: 630px;
+                width: 580px; height: 571px;
                 left: 50%; top: 50%;
-                margin: -215px 0 0 -327px;
+                margin: -250px 0 0 -290px;
                 text-align: center;
+            }
+            p.copyright {
+                position: absolute;
+                z-index: 10;
+                width: 364px; height: 22px;
+                left: 50%;
+                bottom: 30px;
+                margin: 0 0 0 -182px;
+                background: url('../img/pc/copyright.png') 0 0 no-repeat;
             }
         }
     }
@@ -171,17 +201,18 @@ div.wrapper {
             div.info-forms {
                 position: absolute;
                 width: 730px;
-                top: 875px; left: 63px;
+                top: 800px; left: 63px;
+                padding-bottom: 30px;
             }
             div.apply-google {
                 position: absolute;
                 width: 730px;
-                top: 1330px; left: 6px;
+                top: 1290px; left: 6px;
             }
             div.terms-txt {
                 position: absolute;
                 width: 799px; height: 208px;
-                top: 1637px; left: 29px;
+                top: 1597px; left: 29px;
                 background: url('../img/pc/bg_terms.png') 0 0 repeat;
 
                 span {
@@ -232,6 +263,10 @@ div.wrapper {
                 p {
                     float: left;
                     font-weight: 700;
+
+                    &.last {
+                        color: #67b3aa;
+                    }
                 }
                 a {
                     float: right;
@@ -241,11 +276,12 @@ div.wrapper {
                 }
             }
             div.txt-warn {
-                padding-top: 30px;
+                padding-top: 10px;
+                padding-bottom: 30px;
+                letter-spacing: -1px;
                 font-size: 13px;
-                color: #757575;
+                color: #fff;
                 line-height: 26px;
-                padding-left: 30px;
             }
         }
     }
@@ -261,15 +297,16 @@ div.wrapper {
                 position: absolute;
                 width: 100%; height: 100%;
                 left: 0; top: 0;
-                background: url('../img/pc/pc_background_test1.png') 50% 50% no-repeat;
+                background: url('../img/pc/bg_section2_1.png') 50% 50% no-repeat;
                 background-size: cover; 
                 z-index: 2;
             }
             div.bg {
                 position: absolute;
                 width: 100%; height: 100%;
-                left: -100px; top: 0;
-                background: url('../img/pc/pc_background_test2.png') 50% 50% no-repeat;
+                top: 0;
+                left: -100px;
+                background: url('../img/pc/bg_section2_2.png') 50% 50% no-repeat;
                 background-size: cover; 
                 transform: scale(1.2);
                 transition: transform 1.2s ease-in-out, left 1s ease-in-out;
@@ -304,11 +341,37 @@ div.wrapper {
         
         div.fall-contents {
             width: 100%; height: 100%;
-            background: url('../img/pc/bg_4.jpg') 50% 50% no-repeat;
-            background-size: cover;
+            // background: url('../img/pc/bg_4.jpg') 50% 50% no-repeat;
+            // background-size: cover;
+
+            div.scene_bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                background: url('../img/pc/bg_section3_1.png') 50% 50% no-repeat;
+                background-size: cover; 
+                z-index: 2;
+            }
+            div.bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0;
+                left: -100px;
+                background: url('../img/pc/bg_section3_2.png') 50% 50% no-repeat;
+                background-size: cover; 
+                transform: scale(1.2);
+                transition: transform 1.2s ease-in-out, left 1s ease-in-out;
+                z-index: 1;
+
+                &.on {
+                    transform: scale(1);
+                    left: 0;
+                }
+            }
 
             div.character-wrap {
                 position: absolute;
+                z-index: 10;
                 width: 960px; height: 706px;
                 background: url('../img/pc/bg_character.png') 50% 50% no-repeat;
                 left: 50%; top: 50%;
@@ -354,7 +417,7 @@ div.wrapper {
                 div.ch-info {
                     position: absolute;
                     z-index: 9;
-                    width: 500px; height: 300px;
+                    width: 560px; height: 300px;
                     top: 300px; left: 75px;
 
                     p.f {
@@ -417,12 +480,38 @@ div.wrapper {
         
         div.fall-contents {
             width: 100%; height: 100%;
-            background: url('../img/pc/bg_5.jpg') 50% 50% no-repeat;
-            background-size: cover;
+            // background: url('../img/pc/bg_5.jpg') 50% 50% no-repeat;
+            // background-size: cover;
             text-align: center;
+
+            div.scene_bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                background: url('../img/pc/bg_section4_1.png') 50% 50% no-repeat;
+                background-size: cover; 
+                z-index: 2;
+            }
+            div.bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0;
+                left: -100px;
+                background: url('../img/pc/bg_section4_2.png') 50% 50% no-repeat;
+                background-size: cover; 
+                transform: scale(1.2);
+                transition: transform 1.2s ease-in-out, left 1s ease-in-out;
+                z-index: 1;
+
+                &.on {
+                    transform: scale(1);
+                    left: 0;
+                }
+            }
 
             div.content-wrap {
                 position: absolute;
+                z-index: 10;
                 width: 960px; height: 771px;
                 background: url('../img/pc/bg_content.png') 50% 50% no-repeat;
                 left: 50%; top: 50%;
@@ -464,12 +553,38 @@ div.wrapper {
         
         div.fall-contents {
             width: 100%; height: 100%;
-            background: url('../img/pc/bg_6.jpg') 50% 50% no-repeat;
-            background-size: cover;
+            // background: url('../img/pc/bg_6.jpg') 50% 50% no-repeat;
+            // background-size: cover;
             text-align: center;
+
+            div.scene_bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                background: url('../img/pc/bg_section5_1.png') 50% 50% no-repeat;
+                background-size: cover; 
+                z-index: 2;
+            }
+            div.bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0;
+                left: -100px;
+                background: url('../img/pc/bg_section5_2.png') 50% 50% no-repeat;
+                background-size: cover; 
+                transform: scale(1.2);
+                transition: transform 1.2s ease-in-out, left 1s ease-in-out;
+                z-index: 1;
+
+                &.on {
+                    transform: scale(1);
+                    left: 0;
+                }
+            }
 
             div.event-wrap {
                 position: absolute;
+                z-index: 10;
                 width: 960px; height: 780px;
                 background: url('../img/pc/bg_event.png') 50% 50% no-repeat;
                 left: 50%; top: 50%;

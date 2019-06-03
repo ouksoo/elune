@@ -235,38 +235,58 @@ var fallscroll;
 		onSectionChangeStart: function onSectionChangeStart(fs) {
 			/* 섹션 전환이 시작될 때 */
 			init(fs.nextIndex);
+
+			$('header a, header div.games').removeClass('active');
+			console.log(fs.nextIndex);
+			if (fs.nextIndex === 1) {
+				//사전예약
+				$('header a.hm-1').addClass('active');
+			}
+
 			if (fs.nextIndex === 2) {
 				//세계관
+				$('header div.games').addClass('active');
+				$('header a.hm-2').addClass('active');
 				$('#section2 div.bg').addClass('on');
 			} else {
 				$('#section2 div.bg').removeClass('on');
+			}
+
+			if (fs.nextIndex === 3) {
+				//캐릭터
+				$('header div.games').addClass('active');
+				$('header a.hm-3').addClass('active');
+				$('#section3 div.bg').addClass('on');
+			} else {
+				$('#section3 div.bg').removeClass('on');
+			}
+
+			if (fs.nextIndex === 4) {
+				//컨텐츠
+				$('header div.games').addClass('active');
+				$('header a.hm-4').addClass('active');
+				$('#section4 div.bg').addClass('on');
+			} else {
+				$('#section4 div.bg').removeClass('on');
+			}
+
+			if (fs.nextIndex === 5) {
+				//이벤트
+				$('header a.hm-5').addClass('active');
+				$('#section5 div.bg').addClass('on');
+			} else {
+				$('#section5 div.bg').removeClass('on');
 			}
 		},
 		onSectionChangeEnd: function onSectionChangeEnd(fs) {
 			/* 섹션 전환이 완료될 때 */
 
-			$('header a').removeClass('active');
 			if (fs.currentIndex === 0) {}
-			if (fs.currentIndex === 1) {
-				$('header a.hm-1').addClass('active');
-				$('header div.games').removeClass('active');
-			}
-			if (fs.currentIndex === 2) {
-				$('header div.games').addClass('active');
-				$('header a.hm-2').addClass('active');
-			}
-			if (fs.currentIndex === 3) {
-				$('header div.games').addClass('active');
-				$('header a.hm-3').addClass('active');
-			}
-			if (fs.currentIndex === 4) {
-				$('header div.games').addClass('active');
-				$('header a.hm-4').addClass('active');
-			}
-			if (fs.currentIndex === 5) {
-				$('header a.hm-5').addClass('active');
-				$('header div.games').removeClass('active');
-			}
+			if (fs.currentIndex === 1) {}
+			if (fs.currentIndex === 2) {}
+			if (fs.currentIndex === 3) {}
+			if (fs.currentIndex === 4) {}
+			if (fs.currentIndex === 5) {}
 		},
 		onScrollBarChangeStart: function onScrollBarChangeStart(fs) {
 			/* 스크롤바가 섹션에 맞게 상태 변화 시작될 때 */

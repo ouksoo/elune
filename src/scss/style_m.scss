@@ -103,6 +103,10 @@ div.wrapper {
                         float: left;
                         width: 80%;
                         line-height: 18px;
+
+                        &.last {
+                            color: #67b3aa;
+                        }
                     }
                     a {
                         float: right;
@@ -112,10 +116,10 @@ div.wrapper {
                     }
                 }
                 div.txt-warn {
-                    padding-top: 25px;
                     font-size: 8.5px;
                     color: #757575;
                     line-height: 16px;
+                    padding-bottom: 20px;
                 }
             }            
         }
@@ -383,11 +387,11 @@ nav {
             & > a {
                 display: block;
                 color: #fff;
-                font-size: 32px;
+                font-size: 25px;
                 font-weight: 700;
 
                 &.l {
-                    font-size: 24px;
+                    font-size: 18px;
                     background: url('../img/mobile/icon_coffee.png') 0 50% no-repeat;
                     background-size: 37px 37px;
                     padding-left: 50px;
