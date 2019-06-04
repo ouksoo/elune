@@ -193,13 +193,14 @@ div.wrapper {
                 }
                 div.ch-info {
                     background: url('../img/mobile/bg_character.png') 0 0 repeat;
-                    width: 350px; height: 476px;
+                    width: 350px; height: 456px;
                     margin: 15px auto 0 auto;
                     border-radius: 10px;
                     text-align: left;
-                    padding: 238px 30px 30px 30px;
+                    padding: 270px 30px 30px 30px;
 
                     p.f {
+                        position: relative;
                         padding-bottom: 14px;
 
                         span.name {
@@ -208,34 +209,16 @@ div.wrapper {
                             color: #fff;
                         }
                         span.info {
+                            display: inline-block;
                             font-size: 10px;
                             font-weight: 700px;
                             color: #f6ff00;
-                            margin-left: 10px;
+                            margin-top: 7px;
                             letter-spacing: -1px;
                         }
-                    }
-                    p.s {
-                        font-size: 9px;
-                        height: 80px;
-                        color: #fff;
-                        line-height: 16px;
-                        letter-spacing: -1px;
-                    }
-                    p.t {
-                        font-size: 9px;
-                        color: #fff;
-                        font-weight: 700;
-                        line-height: 16px;
-                        padding: 14px 0 15px 0;
-                    }
-
-                    div.ch-bottoms {
-                        a.movieplay {
-                            float: right;
-                        }
-                        div.thumb {
-                            float: left;
+                        span.thumb {
+                            position: absolute;
+                            top: 0px; right: 0;
         
                             a {
                                 float: left;
@@ -257,6 +240,26 @@ div.wrapper {
                             }
                         }
                     }
+                    p.s {
+                        font-size: 9px;
+                        height: 80px;
+                        color: #fff;
+                        line-height: 16px;
+                        letter-spacing: -1px;
+                    }
+                    p.t {
+                        position: relative;
+                        font-size: 9px;
+                        color: #fff;
+                        font-weight: 700;
+                        line-height: 16px;
+                        padding: 14px 0 15px 0;
+
+                        a.movieplay {
+                            position: absolute;
+                            top: 10px; right: -11px;
+                        }
+                    }         
                 }
             }
         }

@@ -66,6 +66,9 @@ div.wrapper {
                     background: url('../img/pc/gnb_txt_1_off.png') 50% 50% no-repeat;
                     text-indent: -9999px;
 
+                    &:hover {
+                        background: url('../img/pc/gnb_txt_1_on.png') 50% 50% no-repeat; 
+                    }
                     &.active {
                         background: url('../img/pc/gnb_txt_1_on.png') 50% 50% no-repeat; 
                     }
@@ -75,6 +78,9 @@ div.wrapper {
                     background: url('../img/pc/gnb_txt_3_off.png') 50% 50% no-repeat;
                     text-indent: -9999px;
 
+                    &:hover {
+                        background: url('../img/pc/gnb_txt_3_on.png') 50% 50% no-repeat;
+                    }
                     &.active {
                         background: url('../img/pc/gnb_txt_3_on.png') 50% 50% no-repeat;
                     }
@@ -94,6 +100,9 @@ div.wrapper {
                 width: 100px;
                 background: url('../img/pc/gnb_txt_2_off.png') 50% 50% no-repeat;
 
+                &:hover {
+                    background: url('../img/pc/gnb_txt_2_on.png') 50% 50% no-repeat;
+                }
                 &.active {
                     background: url('../img/pc/gnb_txt_2_on.png') 50% 50% no-repeat;
                 }
@@ -113,6 +122,9 @@ div.wrapper {
                         line-height: 30px;
                         margin: 0 25px;
 
+                        &:hover {
+                            color: #fff;
+                        }
                         &.active {
                             color: #fff;
                         }
@@ -162,9 +174,9 @@ div.wrapper {
             
             .intro-wrap {
                 position: absolute;
-                width: 580px; height: 571px;
+                width: 563px; height: 544px;
                 left: 50%; top: 50%;
-                margin: -250px 0 0 -290px;
+                margin: -222px 0 0 -280px;
                 text-align: center;
             }
         }
@@ -228,7 +240,7 @@ div.wrapper {
                 }
             }
             div.input-info {
-                padding: 25px 0 30px 0;
+                padding: 25px 0 40px 0;
 
                 input {
                     width: 496px; height: 70px;
@@ -267,7 +279,7 @@ div.wrapper {
                 }
             }
             div.txt-warn {
-                padding-top: 10px;
+                padding-top: 30px;
                 padding-bottom: 30px;
                 letter-spacing: -1px;
                 font-size: 13px;
