@@ -32,14 +32,16 @@ div.wrapper {
 
         div.section0 {
             position: relative;
+            overflow: hidden;
 
             div.movie-intro {
                 position: absolute;
                 z-index: 10;
                 text-align: center;
-                width: 340px; height: 395px;
+                // width: 340px; height: 395px;
+                width: 80%; height: 395px;
                 left: 50%; top: 50%;
-                margin: -190px 0 0 -170px;
+                margin: -190px 0 0 -40%;
             }
         }
 
@@ -111,10 +113,11 @@ div.wrapper {
                     a.btn-apply {
                         display: inline-block;
                         margin-top: 5px;
+                        text-align: center;
 
                         img {
-                            width: 107%;
-                            margin-left: -10px;
+                            width: 100%;
+                            // margin-left: -10px;
                         }
                     }
                 }
