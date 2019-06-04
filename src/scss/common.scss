@@ -98,16 +98,6 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 /* border */
 .nobd {border:0 !important}
 
-@font-face {
-    font-family: 'NotoSansCJKkr';
-    src: url('../img/font/notokr-regular.eot');
-    src: url('../img/font/notokr-regular.eot?#iefix') format('embedded-opentype'),
-         url('../img/font/notokr-regular.woff2') format('woff2'),
-         url('../img/font/notokr-regular.woff') format('woff'),
-         url('../img/font/notokr-regular.ttf') format('truetype'),
-         url('../img/font/notokr-regular.svg#notokr-regular') format('svg');
-}
-
 @import 'style.scss';
 
 
