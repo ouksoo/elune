@@ -475,7 +475,7 @@ div.gallery-wrap {
 /* End of Gallery*/
 
 /* slider actions */
-.lSAction > a {
+.lSAction > span {
 	width: 43px;
 	display: block;
 	top: 50%;
@@ -488,7 +488,7 @@ div.gallery-wrap {
 	-webkit-transition: opacity 0.35s linear 0s;
 	transition: opacity 0.35s linear 0s;
 }
-.lSAction > a:hover {
+.lSAction > span:hover {
 	opacity: 1;
 }
 .lSAction > .lSPrev {

@@ -305,7 +305,7 @@ div.gallery-outside {
 /* End of Gallery*/
 
 /* slider actions */
-.lSAction > a {
+.lSAction > span {
 	width: 33px; height: 33px;
 	display: block;
 	top: 50%;
@@ -317,19 +317,22 @@ div.gallery-outside {
 	-webkit-transition: opacity 0.35s linear 0s;
 	transition: opacity 0.35s linear 0s;
 }
-.lSAction > a:hover {
+.lSAction > span:hover {
 	opacity: 1;
 }
 .lSAction > .lSPrev {
-    background: url('../img/pc/icon_go_left.png') 0 0 no-repeat;
-    background-size: 33px 33px;
+	background: url('../img/pc/icon_go_left.png') 0 0 no-repeat;
+	background-size: 33px 33px;
 	left: 10px;
 }
 .lSAction > .lSNext {
-    background: url('../img/pc/icon_go_right.png') 0 0 no-repeat;
-    background-size: 33px 33px;
+	background: url('../img/pc/icon_go_right.png') 0 0 no-repeat;
+	background-size: 33px 33px;
 	right: 10px;
 }
+
+
+
 .lSAction > a.disabled {
 	pointer-events: none;
 }

@@ -7,6 +7,9 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 <link href="assets/css/common_m.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/jquery.mousewheel-3.1.13.min.js"></script>
+<script src="assets/js/fallscroll-1.1.js"></script>
 </head>
 <body>
     
@@ -165,13 +168,23 @@
 
     <!-- section -->
     <section>
+        <!--20190604-->
         <a name="section0"></a>
-        <div class="section0">
-            <div class="wrap-img"><img src="assets/img/mobile/section_1_1.png" alt="" /></div>
-            <div class="wrap-img"><a href="#" class="movieplay" data-movie="intro"><img src="assets/img/mobile/section_1_2.png" alt="" /></a></div>
-            <div class="wrap-img"><a href="#section1"><img src="assets/img/mobile/section_1_3.png" alt="" /></a></div>
-            <div class="wrap-img"><img src="assets/img/mobile/section_1_4.png" alt="" /></div>
+        <div id="section0" class="section0 section">    
+            <div id="fall-video">
+                <video id="player" autoplay="" muted="" loop="" playsinline="">
+                    <source src="assets/img/pc/video.mp4" type="video/mp4"> 
+                </video>
+                <div class="fall-video-cover"></div>
+            </div>
+
+                <div class="movie-intro">
+                    <img src="assets/img/mobile/intro_movie1.png" alt="" width="100%" />
+                    <a href="#"><img src="assets/img/mobile/intro_movie2.png" alt="" width="100" /></a>
+                    <a href="#section1"><img src="assets/img/mobile/intro_movie3.png" alt="" width="90%" /></a>
+                </div>
         </div>
+        <!--//20190604-->
 
         <a name="section1"></a>
         <div class="section1">
@@ -843,7 +856,7 @@
     </footer>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="assets/js/custom_m.js"></script>
+<script src="assets/js/ui.js"></script>
 </body>
 </html>
