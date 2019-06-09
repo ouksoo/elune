@@ -32,14 +32,28 @@ div.wrapper {
 
         div.section0 {
             position: relative;
+            overflow: hidden;
 
             div.movie-intro {
                 position: absolute;
                 z-index: 10;
                 text-align: center;
-                width: 340px; height: 395px;
+                width: 330px; height: 422px;
+                // width: 90%; height: 395px;
                 left: 50%; top: 50%;
-                margin: -190px 0 0 -170px;
+                margin: -211px 0 0 -165px;
+                overflow: hidden;
+            }
+            div.fall-video-cover {
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                background: #000;
+                opacity: .5;
+
+                img {
+                    width: 100% !important;
+                }
             }
         }
 
@@ -111,10 +125,11 @@ div.wrapper {
                     a.btn-apply {
                         display: inline-block;
                         margin-top: 5px;
+                        text-align: center;
 
                         img {
-                            width: 107%;
-                            margin-left: -10px;
+                            width: 100%;
+                            // margin-left: -10px;
                         }
                     }
                 }

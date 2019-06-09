@@ -16,7 +16,7 @@ var ELUNE = {
             w = winW;
             h = 9 * w / 16;
         }
-        $('#player').css({ 'width': w, 'height': winH });
+        $('#player').css({ 'width': w, 'height': h });
         $('#section0').height(winH);
         if (winW <= 1000) return;
         $('#player').each(function () {
